@@ -1,0 +1,310 @@
+{
+  "navbar": {
+    "home": "首页",
+    "collections": "系列",
+    "sustainability": "可持续性",
+    "colorCards": "色卡",
+    "contact": "联系我们",
+    "search": "搜索...",
+    "logoAlt": "润盛纺织工厂标志"
+  },
+  "heroSection": {
+    "title": "润盛工厂",
+    "subtitle": "创新制造业的未来",
+    "viewProducts": "查看产品",
+    "alt1": "工厂视图1",
+    "alt2": "工厂视图2",
+    "alt3": "工厂视图3"
+  },
+  "home": {
+    "hero": {
+      "title": "优质纺织品解决方案",
+      "subtitle": "面向全球市场的高品质面料"
+    },
+    "exhibition": {
+      "title": "展览",
+      "subtitle": "发现我们之前的展览照片。",
+      "imageAlt1": "卓越品质产品",
+      "imageAlt2": "广泛选择系列",
+      "imageAlt3": "可持续发展重点",
+      "products": {
+        "topQuality": {
+          "title": "卓越品质",
+          "desc": "国际标准的高端产品。"
+        },
+        "wideRange": {
+          "title": "广泛选择",
+          "desc": "从纱线到成品面料，我们应有尽有。"
+        },
+        "sustainability": {
+          "title": "可持续发展",
+          "desc": "环保生产，共创美好未来。"
+        }
+      }
+    },
+    "videoSection": {
+      "title": "探索纱线产品"
+    },
+    "contactInfo": {
+      "mainOffice": "我们的总部",
+      "mainAddress": "中国江苏省苏州市吴江区桃源镇袁新路319号",
+      "phoneNumber": "联系电话",
+      "phoneNumbers": "+8651263858128 / +8618605732767",
+      "puyuanBranch": "润盛纺织（濮院分部）",
+      "puyuanAddress": "浙江省桐乡市濮院工贸路1638号",
+      "email": "电子邮箱",
+      "emailAddress": "ceo@okyarn.com"
+    },
+    "contactForm": {
+      "title": "联系我们",
+      "namePlaceholder": "请输入您的姓名",
+      "emailPlaceholder": "请输入有效的电子邮件地址",
+      "messagePlaceholder": "请输入您的消息",
+      "submit": "提交"
+    }
+  },
+  "collection": {
+    "hero": {
+      "title": "探索我们的系列",
+      "subtitle": "发现为各种场合精心制作的季节性面料系列。",
+      "alt": "系列横幅"
+    },
+    "tabs": {
+      "springSummer": "春夏系列",
+      "autumnWinter": "秋冬系列",
+      "newFabrics": "新品面料"
+    },
+    "products": {
+      "lightweightCotton": {
+        "title": "轻质棉",
+        "desc": "透气棉质，适合温暖天气和轻松叠穿。"
+      },
+      "linenBlend": {
+        "title": "亚麻混纺",
+        "desc": "清爽透气的亚麻，打造轻松夏日装束。"
+      },
+      "pastelCollection": {
+        "title": "柔和色彩系列",
+        "desc": "专为春夏色调调制的柔和色彩。"
+      },
+      "woolBlend": {
+        "title": "羊毛混纺",
+        "desc": "保暖型羊毛混纺，适合凉爽天气。"
+      },
+      "cashmereLuxe": {
+        "title": "奢华羊绒",
+        "desc": "柔软保暖的羊绒，专为优雅设计。"
+      },
+      "deepTones": {
+        "title": "深色调",
+        "desc": "丰富深沉的色彩，完美诠释秋冬时尚。"
+      },
+      "premiumKnit": {
+        "title": "优质针织",
+        "desc": "柔软灵活的针织面料，理想现代服装选择。"
+      },
+      "rayonShine": {
+        "title": "人造丝光泽",
+        "desc": "光滑人造丝，带微妙光泽，适合高端订单。"
+      },
+      "patternedJacquard": {
+        "title": "提花面料",
+        "desc": "精密编织的复杂图案。"
+      }
+    }
+  },
+  "sustainability": {
+    "hero": {
+      "title": "可持续性",
+      "subtitle": "负责任的实践，塑造更美好的明天。",
+      "alt": "可持续性横幅"
+    },
+    "focus": "可持续发展重点",
+    "certificationsTitle": "我们的认证",
+    "topics": {
+      "commitments": {
+        "title": "我们的承诺",
+        "desc": "长期致力于负责任采购、环保实践，并不断创新迈向更绿色的未来。"
+      },
+      "naturalFarm": {
+        "title": "润盛天然农场",
+        "desc": "与当地农场合作，确保透明度、动物福利和天然纤维种植。"
+      },
+      "carbonNeutrality": {
+        "title": "Carbon² – 碳中和",
+        "desc": "在生产、供应链和运营中减少碳排放的渐进式举措。"
+      },
+      "certifications": {
+        "title": "认证与荣誉",
+        "desc": "行业认可的认证和奖项，验证我们向可持续制造发展的历程。"
+      }
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "联系我们",
+      "subtitle": "与润盛纺织全球办事处取得联系。",
+      "alt": "联系我们横幅"
+    },
+    "offices": {
+      "mainFactory": "润盛纺织工厂",
+      "mainFactoryAddress": "中国江苏省苏州市吴江区桃源镇袁新路319号",
+      "mainFactoryPhone": "+86-512-63858128 / +86-18605732767",
+      "mainFactoryEmail": "ceo@okyarn.com",
+      "puyuanBranch": "润盛纺织（濮院分部）",
+      "puyuanBranchAddress": "浙江省桐乡市濮院工贸路1638号",
+      "puyuanBranchEmail": "bert@okyarn.com",
+      "koreaOffice": "韩国办事处",
+      "koreaOfficeAddress": "大韩民国首尔东大门区章汉路18街26-20号2层 (02640)",
+      "koreaOfficeEmail": "come112212@gmail.com",
+      "hongKongOffice": "香港办事处",
+      "hongKongOfficeAddress": "新界荃湾沙咀道26-38号繁荣工业中心11楼19室",
+      "hongKongOfficeEmail": "Patrick@okyarn.com",
+      "japanOffice": "日本办事处",
+      "japanOfficeEmail": "nakauchi@100pw.com",
+      "ukOffice": "英国办事处",
+      "ukOfficeEmail": "uksales@okyarn.com",
+      "businessDept1": "业务一部",
+      "businessDept1Contact": "Kris",
+      "businessDept1Email": "zenglicheng@okyarn.com",
+      "businessDept2": "业务二部",
+      "businessDept2Contact": "Tom",
+      "businessDept2Email": "Sales02@okyarn.com",
+      "businessDept3": "业务三部",
+      "businessDept3Contact": "Pete",
+      "businessDept3Email": "Sales03@okyarn.com"
+    },
+    "locations": {
+      "title": "我们的位置",
+      "mapTitle": "润盛纺织工厂位置",
+      "mapQuery": "中国江苏省苏州市吴江区桃源镇袁新路319号"
+    },
+    "contactLabels": {
+      "contact": "联系人"
+    }
+  },
+  "colorCard": {
+    "hero": {
+      "title": "探索我们的色卡",
+      "subtitle": "发现色卡、电子色卡和我们的模特展示。",
+      "alt": "色卡横幅"
+    },
+    "tabs": {
+      "colorCards": "色卡",
+      "eColorCards": "电子色卡",
+      "models": "模特展示"
+    },
+    "products": {
+      "cashmere": {
+        "title": "羊绒",
+        "desc": "奢华柔软、轻盈且极其保暖。羊绒面料提供永恒的优雅、无与伦比的舒适性和耐用性——非常适合精致的日常穿着和高端可持续时尚。"
+      },
+      "humanNature": {
+        "title": "人与自然系列",
+        "desc": "舒适与可持续性的相遇——人与自然面料，为人类打造，受地球启发。"
+      },
+      "luxuryMaterial": {
+        "title": "奢华材质",
+        "desc": "精致、多功能且环保。一种体现优雅和对地球关怀的面料。"
+      },
+      "semiWorsted": {
+        "title": "半精纺",
+        "desc": "光滑、耐用且透气。一种为舒适而精心制作的面料，具有精致的光泽。"
+      },
+      "sustainableFunction": {
+        "title": "可持续与功能系列",
+        "desc": "环保、功能性强且时尚——可持续与功能系列是您日常的环保选择。"
+      },
+      "traditionalWoolen": {
+        "title": "传统毛纺",
+        "desc": "每一根纱线都承载着传承——传统毛纺将天然温暖与持久耐用相结合。"
+      },
+      "bestseller": {
+        "title": "畅销款",
+        "desc": "数字化精选调色板，在各批次间具有精确的可重复性。"
+      },
+      "runsun9": {
+        "title": "润盛9号",
+        "desc": "数字化精选调色板，在各批次间具有精确的可重复性。"
+      },
+      "runsunA": {
+        "title": "润盛A号",
+        "desc": "数字化精选调色板，在各批次间具有精确的可重复性。"
+      },
+      "runsunJ": {
+        "title": "润盛J号",
+        "desc": "数字化精选调色板，在各批次间具有精确的可重复性。"
+      },
+      "eColorPlaceholder": {
+        "title": "电子色卡",
+        "desc": "图片即将推出..."
+      },
+      "model1": {
+        "title": "模特01",
+        "desc": "展示我们最新时尚材料的实际应用。"
+      },
+      "model2": {
+        "title": "模特02",
+        "desc": "风格与可持续性的完美融合。"
+      },
+      "model3": {
+        "title": "模特03",
+        "desc": "以现代时尚形式呈现的高端面料。"
+      },
+      "model4": {
+        "title": "模特04",
+        "desc": "舒适与优雅的动态结合。"
+      },
+      "model5": {
+        "title": "模特05",
+        "desc": "美学简约与永恒设计。"
+      }
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "公司",
+      "name": "润盛纺织工厂",
+      "address": "中国江苏省苏州市吴江区桃源镇袁新路319号",
+      "phone": "+86-512-63858128 / +86-18605732767",
+      "email": "ceo@okyarn.com",
+      "aboutUs": "关于我们",
+      "certifications": "认证",
+      "ourFactory": "我们的工厂",
+      "news": "新闻与活动"
+    },
+    "products": {
+      "title": "产品",
+      "cashmereYarns": "羊绒纱线",
+      "woolBlends": "羊毛混纺",
+      "cottonLinen": "棉麻",
+      "ecoFibers": "环保纤维",
+      "recycledMaterials": "再生材料",
+      "customSolutions": "定制纺织品解决方案"
+    },
+    "resources": {
+      "title": "资源",
+      "blog": "博客",
+      "fabricCare": "面料护理指南",
+      "technicalSpecs": "技术规格",
+      "downloadBrochure": "下载宣传册",
+      "careers": "职业机会"
+    },
+    "socialMedia": {
+      "wechat": "微信",
+      "xiaohongshu": "小红书",
+      "linkedin": "领英",
+      "instagram": "Instagram"
+    },
+    "copyright": "{{year}} 润盛纺织有限公司 版权所有。"
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "发生错误",
+    "tryAgain": "请重试"
+  },
+  "language": {
+    "english": "EN",
+    "chinese": "中文"
+  }
+}

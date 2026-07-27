@@ -1,0 +1,310 @@
+{
+  "navbar": {
+    "home": "Home",
+    "collections": "Collections",
+    "sustainability": "Sustainability",
+    "colorCards": "Color Cards",
+    "contact": "Contact",
+    "search": "Search...",
+    "logoAlt": "Runsun Textile Factory Logo"
+  },
+  "heroSection": {
+    "title": "Runsun Factory",
+    "subtitle": "Innovating the Future of Manufacturing",
+    "viewProducts": "View Products",
+    "alt1": "Factory View 1",
+    "alt2": "Factory View 2",
+    "alt3": "Factory View 3"
+  },
+  "home": {
+    "hero": {
+      "title": "Premium Textile Solutions",
+      "subtitle": "Quality fabrics for global markets"
+    },
+    "exhibition": {
+      "title": "Exhibition",
+      "subtitle": "Discover our previous exhibition photos.",
+      "imageAlt1": "Top Quality Product",
+      "imageAlt2": "Wide Range Collection",
+      "imageAlt3": "Sustainability Focus",
+      "products": {
+        "topQuality": {
+          "title": "Top Quality",
+          "desc": "International standards for premium products."
+        },
+        "wideRange": {
+          "title": "Wide Range",
+          "desc": "From yarn to finished fabrics, we have it all."
+        },
+        "sustainability": {
+          "title": "Sustainability",
+          "desc": "Eco-friendly production for a better future."
+        }
+      }
+    },
+    "videoSection": {
+      "title": "Explore Yarn Products"
+    },
+    "contactInfo": {
+      "mainOffice": "OUR MAIN OFFICE",
+      "mainAddress": "No.319 Yuanxin Road, Taoyuan Town, Wujiang District, Suzhou City, Jiangsu Province, China",
+      "phoneNumber": "PHONE NUMBER",
+      "phoneNumbers": "+8651263858128 / +8618605732767",
+      "puyuanBranch": "RUNSUN TEXTILE (PUYUAN BRANCH)",
+      "puyuanAddress": "No.1638, Gongmao Road, Puyuan, Tongxiang, Zhejiang",
+      "email": "EMAIL",
+      "emailAddress": "ceo@okyarn.com"
+    },
+    "contactForm": {
+      "title": "Contact Us",
+      "namePlaceholder": "Enter your Name",
+      "emailPlaceholder": "Enter a valid email address",
+      "messagePlaceholder": "Enter your message",
+      "submit": "SUBMIT"
+    }
+  },
+  "collection": {
+    "hero": {
+      "title": "Explore Our Collections",
+      "subtitle": "Discover seasonal fabric collections crafted for every occasion.",
+      "alt": "Collections Hero Banner"
+    },
+    "tabs": {
+      "springSummer": "Spring And Summer",
+      "autumnWinter": "Autumn And Winter",
+      "newFabrics": "New Fabrics"
+    },
+    "products": {
+      "lightweightCotton": {
+        "title": "Lightweight Cotton",
+        "desc": "Breathable cotton for warm days and easy layering."
+      },
+      "linenBlend": {
+        "title": "Linen Blend",
+        "desc": "Crisp, airy linen for effortless summer outfits."
+      },
+      "pastelCollection": {
+        "title": "Pastel Collection",
+        "desc": "Soft hues tailored to Spring/Summer palettes."
+      },
+      "woolBlend": {
+        "title": "Wool Blend",
+        "desc": "Warmth-forward wool blends for cooler weather."
+      },
+      "cashmereLuxe": {
+        "title": "Cashmere Luxe",
+        "desc": "Soft, insulating cashmere designed for elegance."
+      },
+      "deepTones": {
+        "title": "Deep Tones",
+        "desc": "Rich, dark shades perfect for A/W statements."
+      },
+      "premiumKnit": {
+        "title": "Premium Knit",
+        "desc": "Soft, flexible knit ideal for modern apparel."
+      },
+      "rayonShine": {
+        "title": "Rayon Shine",
+        "desc": "Smooth rayon with a subtle sheen for premium orders."
+      },
+      "patternedJacquard": {
+        "title": "Patterned Jacquard",
+        "desc": "Intricate patterns woven with precision."
+      }
+    }
+  },
+  "sustainability": {
+    "hero": {
+      "title": "Sustainability",
+      "subtitle": "Responsible practices shaping a better tomorrow.",
+      "alt": "Sustainability Hero Banner"
+    },
+    "focus": "Sustainability Focus",
+    "certificationsTitle": "Our Certifications",
+    "topics": {
+      "commitments": {
+        "title": "Our Commitments",
+        "desc": "Long-term dedication to responsible sourcing, eco-friendly practices, and innovation toward a greener future."
+      },
+      "naturalFarm": {
+        "title": "Runsun Natural Farm",
+        "desc": "Partnering with local farms to ensure transparency, animal welfare, and naturally grown fibers."
+      },
+      "carbonNeutrality": {
+        "title": "Carbon² – Carbon Neutrality",
+        "desc": "Progressive initiatives to reduce carbon emissions across production, supply chain, and operations."
+      },
+      "certifications": {
+        "title": "Certifications & Accolades",
+        "desc": "Industry-recognized certifications and awards validating our journey toward sustainable manufacturing."
+      }
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact Us",
+      "subtitle": "Get in touch with Runsun Textile offices worldwide.",
+      "alt": "Contact Hero Banner"
+    },
+    "offices": {
+      "mainFactory": "Runsun Textile Factory",
+      "mainFactoryAddress": "No.319 Yuanxin Road, Taoyuan Town, Wujiang District, Suzhou City, Jiangsu Province, China",
+      "mainFactoryPhone": "+86-512-63858128 / +86-18605732767",
+      "mainFactoryEmail": "ceo@okyarn.com",
+      "puyuanBranch": "Runsun Textile (Puyuan Branch)",
+      "puyuanBranchAddress": "No.1638, Gongmao Road, Puyuan, Tongxiang, Zhejiang",
+      "puyuanBranchEmail": "bert@okyarn.com",
+      "koreaOffice": "South Korea Office",
+      "koreaOfficeAddress": "2nd Floor, 26-20 Janghan-ro 18gil, Dongdaemun-gu, Seoul, Republic of Korea (02640)",
+      "koreaOfficeEmail": "come112212@gmail.com",
+      "hongKongOffice": "Hong Kong Office",
+      "hongKongOfficeAddress": "Workshop 19, 11/F Thriving Industrial Centre, 26-38 Sha Tsui Road, Tsuen Wan, New Territories",
+      "hongKongOfficeEmail": "Patrick@okyarn.com",
+      "japanOffice": "Japan Office",
+      "japanOfficeEmail": "nakauchi@100pw.com",
+      "ukOffice": "UK Office",
+      "ukOfficeEmail": "uksales@okyarn.com",
+      "businessDept1": "Business Department One",
+      "businessDept1Contact": "Kris",
+      "businessDept1Email": "zenglicheng@okyarn.com",
+      "businessDept2": "Business Department Two",
+      "businessDept2Contact": "Tom",
+      "businessDept2Email": "Sales02@okyarn.com",
+      "businessDept3": "Business Department Three",
+      "businessDept3Contact": "Pete",
+      "businessDept3Email": "Sales03@okyarn.com"
+    },
+    "locations": {
+      "title": "Our Location",
+      "mapTitle": "Runsun Textile Factory Location",
+      "mapQuery": "No.319+Yuanxin+Road,+Taoyuan+Town,+Wujiang+District,+Suzhou+City,+Jiangsu+Province,+China"
+    },
+    "contactLabels": {
+      "contact": "Contact"
+    }
+  },
+  "colorCard": {
+    "hero": {
+      "title": "Explore Our Cards",
+      "subtitle": "Discover Color Cards, E-Color Cards, and our Model Showcase.",
+      "alt": "Color Cards Hero Banner"
+    },
+    "tabs": {
+      "colorCards": "Color Cards",
+      "eColorCards": "E-Color Cards",
+      "models": "Models"
+    },
+    "products": {
+      "cashmere": {
+        "title": "Cashmere",
+        "desc": "Luxuriously soft, lightweight, and incredibly warm. Cashmere fabric offers timeless elegance, unmatched comfort, and durability—perfect for refined everyday wear and premium sustainable fashion."
+      },
+      "humanNature": {
+        "title": "Human and Nature collection",
+        "desc": "Where comfort meets sustainability — Human and Nature fabric, crafted for people, inspired by the planet."
+      },
+      "luxuryMaterial": {
+        "title": "Luxury Material",
+        "desc": "Refined, versatile, and eco-friendly. A fabric that embodies elegance and care for the earth."
+      },
+      "semiWorsted": {
+        "title": "Semi Worsted",
+        "desc": "Smooth, durable, and breathable. A fabric crafted for comfort with a refined finish."
+      },
+      "sustainableFunction": {
+        "title": "Sustainable & Function collection",
+        "desc": "Eco-friendly, functional, and stylish — the Sustainable & Function Collection is your everyday conscious choice."
+      },
+      "traditionalWoolen": {
+        "title": "Traditional Woolen",
+        "desc": "Heritage in every thread — Traditional Woolen combines natural warmth with lasting durability."
+      },
+      "bestseller": {
+        "title": "Bestseller",
+        "desc": "Digitally curated palette with precise repeatability across batches."
+      },
+      "runsun9": {
+        "title": "Runsun 9",
+        "desc": "Digitally curated palette with precise repeatability across batches."
+      },
+      "runsunA": {
+        "title": "Runsun A",
+        "desc": "Digitally curated palette with precise repeatability across batches."
+      },
+      "runsunJ": {
+        "title": "Runsun J",
+        "desc": "Digitally curated palette with precise repeatability across batches."
+      },
+      "eColorPlaceholder": {
+        "title": "E-Color",
+        "desc": "Image coming soon..."
+      },
+      "model1": {
+        "title": "Model 01",
+        "desc": "Showcasing our latest fashion material in action."
+      },
+      "model2": {
+        "title": "Model 02",
+        "desc": "A blend of style and sustainability."
+      },
+      "model3": {
+        "title": "Model 03",
+        "desc": "Premium fabrics captured in modern fashion form."
+      },
+      "model4": {
+        "title": "Model 04",
+        "desc": "Comfort meets elegance in motion."
+      },
+      "model5": {
+        "title": "Model 05",
+        "desc": "Aesthetic simplicity and timeless design."
+      }
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Company",
+      "name": "Runsun Textile Factory",
+      "address": "No.319 Yuanxin Road, Taoyuan Town, Wujiang District, Suzhou City, Jiangsu Province, China",
+      "phone": "+86-512-63858128 / +86-18605732767",
+      "email": "ceo@okyarn.com",
+      "aboutUs": "About Us",
+      "certifications": "Certifications",
+      "ourFactory": "Our Factory",
+      "news": "News & Events"
+    },
+    "products": {
+      "title": "Products",
+      "cashmereYarns": "Cashmere Yarns",
+      "woolBlends": "Wool Blends",
+      "cottonLinen": "Cotton & Linen",
+      "ecoFibers": "Eco-friendly Fibers",
+      "recycledMaterials": "Recycled Materials",
+      "customSolutions": "Custom Textile Solutions"
+    },
+    "resources": {
+      "title": "Resources",
+      "blog": "Blog",
+      "fabricCare": "Fabric Care Guide",
+      "technicalSpecs": "Technical Specs",
+      "downloadBrochure": "Download Brochure",
+      "careers": "Career Opportunities"
+    },
+    "socialMedia": {
+      "wechat": "WeChat",
+      "xiaohongshu": "Red Note (Xiaohongshu)",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram"
+    },
+    "copyright": "{{year}} Runsun Textile Co., Ltd. All Rights Reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "tryAgain": "Please try again"
+  },
+  "language": {
+    "english": "EN",
+    "chinese": "中文"
+  }
+}
