@@ -99,7 +99,7 @@ export default function Home() {
       <section className="bg-gray-100 py-12 sm:py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
           {/* Info Boxes */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
             <div className="bg-white p-5 sm:p-6 rounded-xl shadow-md">
               <div className="text-orange-400 mb-2 sm:mb-3 text-2xl sm:text-3xl">📍</div>
               <h4 className="font-bold mb-2 text-sm sm:text-base">{t('home.contactInfo.mainOffice')}</h4>
@@ -112,15 +112,6 @@ export default function Home() {
               <div className="text-orange-400 mb-2 sm:mb-3 text-2xl sm:text-3xl">📞</div>
               <h4 className="font-bold mb-2 text-sm sm:text-base">{t('home.contactInfo.phoneNumber')}</h4>
               <p className="text-xs sm:text-sm text-gray-700">{t('home.contactInfo.phoneNumbers')}</p>
-            </div>
-
-            <div className="bg-white p-5 sm:p-6 rounded-xl shadow-md">
-              <div className="text-orange-400 mb-2 sm:mb-3 text-2xl sm:text-3xl">📠</div>
-              <h4 className="font-bold mb-2 text-sm sm:text-base">
-{t('home.contactInfo.puyuanBranch')}
-</h4>
-              <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">{t('home.contactInfo.puyuanAddress')}
-</p>
             </div>
 
             <div className="bg-white p-5 sm:p-6 rounded-xl shadow-md">

@@ -235,6 +235,66 @@
         "title": "Runsun J",
         "desc": "Digitally curated palette with precise repeatability across batches."
       },
+      "runsunFangK": {
+        "title": "Runsun Square K",
+        "desc": "Premium digital color card with precise color matching for consistent quality."
+      },
+      "runsunFangQ": {
+        "title": "Runsun Square Q",
+        "desc": "Advanced digital color card featuring seasonal trends and modern palettes."
+      },
+      "runsunMeiHua6": {
+        "title": "Runsun Plum 6",
+        "desc": "Digital color card showcasing classic elegance with timeless color combinations."
+      },
+      "runsunMeiHua7": {
+        "title": "Runsun Plum 7",
+        "desc": "Premium color collection with vibrant hues and exceptional clarity."
+      },
+      "runsunMeiHua8": {
+        "title": "Runsun Plum 8",
+        "desc": "Sophisticated color card designed for contemporary textile applications."
+      },
+      "runsunMeiHua9": {
+        "title": "Runsun Plum 9",
+        "desc": "Digital palette featuring rich tones and precise color reproduction."
+      },
+      "runsunMeiHuaA": {
+        "title": "Runsun Plum A",
+        "desc": "Premium color card with elegant shades for high-end fabric collections."
+      },
+      "runsunMeiHuaQ": {
+        "title": "Runsun Plum Q",
+        "desc": "Advanced digital color card with professional-grade color accuracy."
+      },
+      "runsunHongTaoA": {
+        "title": "Runsun Heart A",
+        "desc": "Premium digital color card featuring warm tones and sophisticated palettes."
+      },
+      "runsunHongTaoJ": {
+        "title": "Runsun Heart J",
+        "desc": "Color card with vibrant hues designed for modern textile applications."
+      },
+      "runsunHongTaoK": {
+        "title": "Runsun Heart K",
+        "desc": "Digital palette showcasing bold colors and exceptional color consistency."
+      },
+      "runsunHongTaoQ": {
+        "title": "Runsun Heart Q",
+        "desc": "Premium color collection with precise color matching and professional quality."
+      },
+      "runsunHeiTao6": {
+        "title": "Runsun Spade 6",
+        "desc": "Digital color card featuring deep, rich tones for premium fabrics."
+      },
+      "runsunHeiTao7": {
+        "title": "Runsun Spade 7",
+        "desc": "Advanced palette with sophisticated color combinations and clarity."
+      },
+      "runsunHeiTao8": {
+        "title": "Runsun Spade 8",
+        "desc": "Premium digital color card with professional-grade color accuracy."
+      },
       "eColorPlaceholder": {
         "title": "E-Color",
         "desc": "Image coming soon..."

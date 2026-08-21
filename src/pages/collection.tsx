@@ -40,17 +40,6 @@ const getSpringSummerFall = (t: any): Card[] => [
   { title: "Weaving Series 07", img: "/collections/spring-summer/weaving-two-07.jpg", desc: "Contemporary weaving designs" },
   { title: "Weaving Series 08", img: "/collections/spring-summer/weaving-two-08.jpg", desc: "Contemporary weaving designs" },
   { title: "Weaving Series 09", img: "/collections/spring-summer/weaving-two-09.jpg", desc: "Contemporary weaving designs" },
-  // Factory Photos
-  { title: "Production View 01", img: "/collections/spring-summer/factory-01.jpg", desc: "State-of-the-art manufacturing" },
-  { title: "Production View 02", img: "/collections/spring-summer/factory-02.jpg", desc: "State-of-the-art manufacturing" },
-  { title: "Production View 03", img: "/collections/spring-summer/factory-03.jpg", desc: "State-of-the-art manufacturing" },
-  { title: "Production View 04", img: "/collections/spring-summer/factory-04.jpg", desc: "State-of-the-art manufacturing" },
-  { title: "Production View 05", img: "/collections/spring-summer/factory-05.jpg", desc: "State-of-the-art manufacturing" },
-  { title: "Production View 06", img: "/collections/spring-summer/factory-06.jpg", desc: "State-of-the-art manufacturing" },
-  { title: "Production View 07", img: "/collections/spring-summer/factory-07.jpg", desc: "State-of-the-art manufacturing" },
-  { title: "Production View 08", img: "/collections/spring-summer/factory-08.jpg", desc: "State-of-the-art manufacturing" },
-  { title: "Production View 09", img: "/collections/spring-summer/factory-09.jpg", desc: "State-of-the-art manufacturing" },
-  { title: "Production View 10", img: "/collections/spring-summer/factory-10.jpg", desc: "State-of-the-art manufacturing" },
   // Spring/Summer Main Collection
   { title: t('collection.products.lightweightCotton.title'), img: "/collections/spring-summer/spring-summer-01.jpg", desc: t('collection.products.lightweightCotton.desc') },
   { title: t('collection.products.linenBlend.title'), img: "/collections/spring-summer/spring-summer-02.png", desc: t('collection.products.linenBlend.desc') },
@@ -176,6 +165,20 @@ const getAutumnWinterFall = (_t: any): Card[] => [
   { title: "AW Series 4 23", img: "/collections/autumn-winter/aw4-23.jpg", desc: "Premium winter fabrics" },
   { title: "AW Series 4 24", img: "/collections/autumn-winter/aw4-24.jpg", desc: "Premium winter fabrics" },
   { title: "AW Series 4 25", img: "/collections/autumn-winter/aw4-25.jpg", desc: "Premium winter fabrics" },
+];
+
+const getFactoryCards = (_t: any): Card[] => [
+  // Factory Photos
+  { title: "Production View 01", img: "/collections/spring-summer/factory-01.jpg", desc: "State-of-the-art manufacturing" },
+  { title: "Production View 02", img: "/collections/spring-summer/factory-02.jpg", desc: "State-of-the-art manufacturing" },
+  { title: "Production View 03", img: "/collections/spring-summer/factory-03.jpg", desc: "State-of-the-art manufacturing" },
+  { title: "Production View 04", img: "/collections/spring-summer/factory-04.jpg", desc: "State-of-the-art manufacturing" },
+  { title: "Production View 05", img: "/collections/spring-summer/factory-05.jpg", desc: "State-of-the-art manufacturing" },
+  { title: "Production View 06", img: "/collections/spring-summer/factory-06.jpg", desc: "State-of-the-art manufacturing" },
+  { title: "Production View 07", img: "/collections/spring-summer/factory-07.jpg", desc: "State-of-the-art manufacturing" },
+  { title: "Production View 08", img: "/collections/spring-summer/factory-08.jpg", desc: "State-of-the-art manufacturing" },
+  { title: "Production View 09", img: "/collections/spring-summer/factory-09.jpg", desc: "State-of-the-art manufacturing" },
+  { title: "Production View 10", img: "/collections/spring-summer/factory-10.jpg", desc: "State-of-the-art manufacturing" },
 ];
 
 const getNewFabrics = (_t: any): Card[] => [
@@ -325,13 +328,15 @@ const CardGrid = ({ items, t }: { items: Card[]; t: any }) => (
 
 export default function Collection() {
   const { t } = useTranslation();
-  const [tab, setTab] = useState<"spring" | "autumn" | "new">("spring");
+  const [tab, setTab] = useState<"spring" | "autumn" | "new" | "factory">("spring");
 
   const items =
     tab === "spring"
       ? getSpringSummerFall(t)
       : tab === "autumn"
       ? getAutumnWinterFall(t)
+      : tab === "factory"
+      ? getFactoryCards(t)
       : getNewFabrics(t);
 
   const title =
@@ -339,6 +344,8 @@ export default function Collection() {
       ? t('collection.tabs.springSummer')
       : tab === "autumn"
       ? t('collection.tabs.autumnWinter')
+      : tab === "factory"
+      ? "Factory"
       : t('collection.tabs.newFabrics');
 
   return (
@@ -372,6 +379,9 @@ export default function Collection() {
           </TabButton>
           <TabButton active={tab === "new"} onClick={() => setTab("new")}>
             {t('collection.tabs.newFabrics')}
+          </TabButton>
+          <TabButton active={tab === "factory"} onClick={() => setTab("factory")}>
+            Factory
           </TabButton>
         </div>
       </div>
