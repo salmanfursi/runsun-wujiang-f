@@ -1,3 +1,4 @@
+import CompanyCulture from "./pages/companyCulture";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Home from "./pages/home";
@@ -66,7 +67,9 @@ export default function App() {
           <Route path="/collections" element={<Collection />} />
           <Route path="/products" element={<Products />} />
           <Route path="/sustainability" element={<Sustainability />} />
+          <Route path="/yarn" element={<ColorCard />} />
           <Route path="/color-cards" element={<ColorCard />} />
+          <Route path="/company-culture" element={<CompanyCulture />} />
           <Route path="/contact" element={<Contacts />} />
         </Routes>
         <Footer />

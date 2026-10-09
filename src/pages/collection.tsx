@@ -1,3 +1,5 @@
+import type { TFunction } from "i18next";
+import banner from "../assets/colorCardBanner.jpg";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { R2_BASE } from "../lib/r2";
@@ -8,7 +10,7 @@ type Card = {
   desc: string;
 };
 
-const getSpringSummerFall = (t: any): Card[] => [
+const getSpringSummerFall = (t: TFunction): Card[] => [
   // Weaving Photos (One)
   { title: "Weaving Collection 01", img: "/collections/spring-summer/weaving-one-01.jpg", desc: "Premium weaving craftsmanship" },
   { title: "Weaving Collection 02", img: "/collections/spring-summer/weaving-one-02.jpg", desc: "Premium weaving craftsmanship" },
@@ -53,16 +55,16 @@ const getSpringSummerFall = (t: any): Card[] => [
   { title: "Spring Summer 10", img: "/collections/spring-summer/spring-summer-10.jpg", desc: "Light seasonal fabrics" },
   { title: "Spring Summer 11", img: "/collections/spring-summer/spring-summer-11.jpg", desc: "Light seasonal fabrics" },
   { title: "Spring Summer 12", img: "/collections/spring-summer/spring-summer-12.jpg", desc: "Light seasonal fabrics" },
-  { title: "Spring Summer 13", img: "/collections/spring-summer/spring-summer-13.jpg", desc: "Light seasonal fabrics" },
+  { title: "Spring Summer 13", img: "/collections/spring-summer/spring-summer-13.png", desc: "Light seasonal fabrics" },
   { title: "Spring Summer 14", img: "/collections/spring-summer/spring-summer-14.jpg", desc: "Light seasonal fabrics" },
-  { title: "Spring Summer 15", img: "/collections/spring-summer/spring-summer-15.jpg", desc: "Light seasonal fabrics" },
+  { title: "Spring Summer 15", img: "/collections/spring-summer/spring-summer-15.png", desc: "Light seasonal fabrics" },
   { title: "Spring Summer 16", img: "/collections/spring-summer/spring-summer-16.jpg", desc: "Light seasonal fabrics" },
   { title: "Spring Summer 17", img: "/collections/spring-summer/spring-summer-17.jpg", desc: "Light seasonal fabrics" },
   { title: "Spring Summer 18", img: "/collections/spring-summer/spring-summer-18.jpg", desc: "Light seasonal fabrics" },
-  { title: "Spring Summer 19", img: "/collections/spring-summer/spring-summer-19.png", desc: "Light seasonal fabrics" },
+  { title: "Spring Summer 19", img: "/collections/spring-summer/spring-summer-19.jpg", desc: "Light seasonal fabrics" },
 ];
 
-const getAutumnWinterFall = (_t: any): Card[] => [
+const getAutumnWinterFall = (): Card[] => [
   // Autumn Winter 1
   { title: "AW Collection 01", img: "/collections/autumn-winter/aw1-01.png", desc: "Autumn Winter premium collection" },
   { title: "AW Collection 02", img: "/collections/autumn-winter/aw1-02.png", desc: "Autumn Winter premium collection" },
@@ -101,7 +103,7 @@ const getAutumnWinterFall = (_t: any): Card[] => [
   { title: "AW Series 2 16", img: "/collections/autumn-winter/aw2-16.jpg", desc: "Winter warmth collection" },
   { title: "AW Series 2 17", img: "/collections/autumn-winter/aw2-17.jpg", desc: "Winter warmth collection" },
   { title: "AW Series 2 18", img: "/collections/autumn-winter/aw2-18.jpg", desc: "Winter warmth collection" },
-  { title: "AW Series 2 19", img: "/collections/autumn-winter/aw2-19.jpg", desc: "Winter warmth collection" },
+  { title: "AW Series 2 19", img: "/collections/autumn-winter/aw2-19.png", desc: "Winter warmth collection" },
   { title: "AW Series 2 20", img: "/collections/autumn-winter/aw2-20.jpg", desc: "Winter warmth collection" },
   { title: "AW Series 2 21", img: "/collections/autumn-winter/aw2-21.jpg", desc: "Winter warmth collection" },
   { title: "AW Series 2 22", img: "/collections/autumn-winter/aw2-22.jpg", desc: "Winter warmth collection" },
@@ -109,9 +111,9 @@ const getAutumnWinterFall = (_t: any): Card[] => [
   { title: "AW Series 2 24", img: "/collections/autumn-winter/aw2-24.jpg", desc: "Winter warmth collection" },
   { title: "AW Series 2 25", img: "/collections/autumn-winter/aw2-25.jpg", desc: "Winter warmth collection" },
   { title: "AW Series 2 26", img: "/collections/autumn-winter/aw2-26.jpg", desc: "Winter warmth collection" },
-  { title: "AW Series 2 27", img: "/collections/autumn-winter/aw2-27.jpg", desc: "Winter warmth collection" },
+  { title: "AW Series 2 27", img: "/collections/autumn-winter/aw2-27.png", desc: "Winter warmth collection" },
   { title: "AW Series 2 28", img: "/collections/autumn-winter/aw2-28.jpg", desc: "Winter warmth collection" },
-  { title: "AW Series 2 29", img: "/collections/autumn-winter/aw2-29.jpg", desc: "Winter warmth collection" },
+  { title: "AW Series 2 29", img: "/collections/autumn-winter/aw2-29.png", desc: "Winter warmth collection" },
   { title: "AW Series 2 30", img: "/collections/autumn-winter/aw2-30.jpg", desc: "Winter warmth collection" },
   { title: "AW Series 2 31", img: "/collections/autumn-winter/aw2-31.jpg", desc: "Winter warmth collection" },
   { title: "AW Series 2 32", img: "/collections/autumn-winter/aw2-32.jpg", desc: "Winter warmth collection" },
@@ -121,24 +123,24 @@ const getAutumnWinterFall = (_t: any): Card[] => [
   { title: "AW Series 3 02", img: "/collections/autumn-winter/aw3-02.jpg", desc: "Cold weather essentials" },
   { title: "AW Series 3 03", img: "/collections/autumn-winter/aw3-03.png", desc: "Cold weather essentials" },
   { title: "AW Series 3 04", img: "/collections/autumn-winter/aw3-04.png", desc: "Cold weather essentials" },
-  { title: "AW Series 3 05", img: "/collections/autumn-winter/aw3-05.png", desc: "Cold weather essentials" },
-  { title: "AW Series 3 06", img: "/collections/autumn-winter/aw3-06.jpg", desc: "Cold weather essentials" },
+  { title: "AW Series 3 05", img: "/collections/autumn-winter/aw3-05.jpg", desc: "Cold weather essentials" },
+  { title: "AW Series 3 06", img: "/collections/autumn-winter/aw3-06.png", desc: "Cold weather essentials" },
   { title: "AW Series 3 07", img: "/collections/autumn-winter/aw3-07.jpg", desc: "Cold weather essentials" },
-  { title: "AW Series 3 08", img: "/collections/autumn-winter/aw3-08.jpg", desc: "Cold weather essentials" },
+  { title: "AW Series 3 08", img: "/collections/autumn-winter/aw3-08.png", desc: "Cold weather essentials" },
   { title: "AW Series 3 09", img: "/collections/autumn-winter/aw3-09.png", desc: "Cold weather essentials" },
-  { title: "AW Series 3 10", img: "/collections/autumn-winter/aw3-10.png", desc: "Cold weather essentials" },
-  { title: "AW Series 3 11", img: "/collections/autumn-winter/aw3-11.png", desc: "Cold weather essentials" },
-  { title: "AW Series 3 12", img: "/collections/autumn-winter/aw3-12.jpg", desc: "Cold weather essentials" },
-  { title: "AW Series 3 13", img: "/collections/autumn-winter/aw3-13.jpg", desc: "Cold weather essentials" },
-  { title: "AW Series 3 14", img: "/collections/autumn-winter/aw3-14.jpg", desc: "Cold weather essentials" },
-  { title: "AW Series 3 15", img: "/collections/autumn-winter/aw3-15.jpg", desc: "Cold weather essentials" },
-  { title: "AW Series 3 16", img: "/collections/autumn-winter/aw3-16.jpg", desc: "Cold weather essentials" },
-  { title: "AW Series 3 17", img: "/collections/autumn-winter/aw3-17.jpg", desc: "Cold weather essentials" },
-  { title: "AW Series 3 18", img: "/collections/autumn-winter/aw3-18.jpg", desc: "Cold weather essentials" },
-  { title: "AW Series 3 19", img: "/collections/autumn-winter/aw3-19.jpg", desc: "Cold weather essentials" },
-  { title: "AW Series 3 20", img: "/collections/autumn-winter/aw3-20.jpg", desc: "Cold weather essentials" },
-  { title: "AW Series 3 21", img: "/collections/autumn-winter/aw3-21.jpg", desc: "Cold weather essentials" },
-  { title: "AW Series 3 22", img: "/collections/autumn-winter/aw3-22.jpg", desc: "Cold weather essentials" },
+  { title: "AW Series 3 10", img: "/collections/autumn-winter/aw3-10.jpg", desc: "Cold weather essentials" },
+  { title: "AW Series 3 11", img: "/collections/autumn-winter/aw3-11.jpg", desc: "Cold weather essentials" },
+  { title: "AW Series 3 12", img: "/collections/autumn-winter/aw3-12.png", desc: "Cold weather essentials" },
+  { title: "AW Series 3 13", img: "/collections/autumn-winter/aw3-13.png", desc: "Cold weather essentials" },
+  { title: "AW Series 3 14", img: "/collections/autumn-winter/aw3-14.png", desc: "Cold weather essentials" },
+  { title: "AW Series 3 15", img: "/collections/autumn-winter/aw3-15.png", desc: "Cold weather essentials" },
+  { title: "AW Series 3 16", img: "/collections/autumn-winter/aw3-16.png", desc: "Cold weather essentials" },
+  { title: "AW Series 3 17", img: "/collections/autumn-winter/aw3-17.png", desc: "Cold weather essentials" },
+  { title: "AW Series 3 18", img: "/collections/autumn-winter/aw3-18.png", desc: "Cold weather essentials" },
+  { title: "AW Series 3 19", img: "/collections/autumn-winter/aw3-19.png", desc: "Cold weather essentials" },
+  { title: "AW Series 3 20", img: "/collections/autumn-winter/aw3-20.png", desc: "Cold weather essentials" },
+  { title: "AW Series 3 21", img: "/collections/autumn-winter/aw3-21.png", desc: "Cold weather essentials" },
+  { title: "AW Series 3 22", img: "/collections/autumn-winter/aw3-22.png", desc: "Cold weather essentials" },
   // Autumn Winter 4
   { title: "AW Series 4 01", img: "/collections/autumn-winter/aw4-01.jpg", desc: "Premium winter fabrics" },
   { title: "AW Series 4 02", img: "/collections/autumn-winter/aw4-02.jpg", desc: "Premium winter fabrics" },
@@ -148,40 +150,26 @@ const getAutumnWinterFall = (_t: any): Card[] => [
   { title: "AW Series 4 06", img: "/collections/autumn-winter/aw4-06.jpg", desc: "Premium winter fabrics" },
   { title: "AW Series 4 07", img: "/collections/autumn-winter/aw4-07.jpg", desc: "Premium winter fabrics" },
   { title: "AW Series 4 08", img: "/collections/autumn-winter/aw4-08.jpg", desc: "Premium winter fabrics" },
-  { title: "AW Series 4 09", img: "/collections/autumn-winter/aw4-09.jpg", desc: "Premium winter fabrics" },
-  { title: "AW Series 4 10", img: "/collections/autumn-winter/aw4-10.png", desc: "Premium winter fabrics" },
-  { title: "AW Series 4 11", img: "/collections/autumn-winter/aw4-11.jpg", desc: "Premium winter fabrics" },
-  { title: "AW Series 4 12", img: "/collections/autumn-winter/aw4-12.png", desc: "Premium winter fabrics" },
-  { title: "AW Series 4 13", img: "/collections/autumn-winter/aw4-13.jpg", desc: "Premium winter fabrics" },
+  { title: "AW Series 4 09", img: "/collections/autumn-winter/aw4-09.png", desc: "Premium winter fabrics" },
+  { title: "AW Series 4 10", img: "/collections/autumn-winter/aw4-10.jpg", desc: "Premium winter fabrics" },
+  { title: "AW Series 4 11", img: "/collections/autumn-winter/aw4-11.png", desc: "Premium winter fabrics" },
+  { title: "AW Series 4 12", img: "/collections/autumn-winter/aw4-12.jpg", desc: "Premium winter fabrics" },
+  { title: "AW Series 4 13", img: "/collections/autumn-winter/aw4-13.png", desc: "Premium winter fabrics" },
   { title: "AW Series 4 14", img: "/collections/autumn-winter/aw4-14.png", desc: "Premium winter fabrics" },
   { title: "AW Series 4 15", img: "/collections/autumn-winter/aw4-15.png", desc: "Premium winter fabrics" },
   { title: "AW Series 4 16", img: "/collections/autumn-winter/aw4-16.png", desc: "Premium winter fabrics" },
-  { title: "AW Series 4 17", img: "/collections/autumn-winter/aw4-17.png", desc: "Premium winter fabrics" },
+  { title: "AW Series 4 17", img: "/collections/autumn-winter/aw4-17.jpg", desc: "Premium winter fabrics" },
   { title: "AW Series 4 18", img: "/collections/autumn-winter/aw4-18.jpg", desc: "Premium winter fabrics" },
-  { title: "AW Series 4 19", img: "/collections/autumn-winter/aw4-19.jpg", desc: "Premium winter fabrics" },
-  { title: "AW Series 4 20", img: "/collections/autumn-winter/aw4-20.jpg", desc: "Premium winter fabrics" },
-  { title: "AW Series 4 21", img: "/collections/autumn-winter/aw4-21.jpg", desc: "Premium winter fabrics" },
-  { title: "AW Series 4 22", img: "/collections/autumn-winter/aw4-22.jpg", desc: "Premium winter fabrics" },
-  { title: "AW Series 4 23", img: "/collections/autumn-winter/aw4-23.jpg", desc: "Premium winter fabrics" },
-  { title: "AW Series 4 24", img: "/collections/autumn-winter/aw4-24.jpg", desc: "Premium winter fabrics" },
-  { title: "AW Series 4 25", img: "/collections/autumn-winter/aw4-25.jpg", desc: "Premium winter fabrics" },
+  { title: "AW Series 4 19", img: "/collections/autumn-winter/aw4-19.png", desc: "Premium winter fabrics" },
+  { title: "AW Series 4 20", img: "/collections/autumn-winter/aw4-20.png", desc: "Premium winter fabrics" },
+  { title: "AW Series 4 21", img: "/collections/autumn-winter/aw4-21.png", desc: "Premium winter fabrics" },
+  { title: "AW Series 4 22", img: "/collections/autumn-winter/aw4-22.png", desc: "Premium winter fabrics" },
+  { title: "AW Series 4 23", img: "/collections/autumn-winter/aw4-23.png", desc: "Premium winter fabrics" },
+  { title: "AW Series 4 24", img: "/collections/autumn-winter/aw4-24.png", desc: "Premium winter fabrics" },
+  { title: "AW Series 4 25", img: "/collections/autumn-winter/aw4-25.png", desc: "Premium winter fabrics" },
 ];
 
-const getFactoryCards = (_t: any): Card[] => [
-  // Factory Photos
-  { title: "Production View 01", img: "/collections/spring-summer/factory-01.jpg", desc: "State-of-the-art manufacturing" },
-  { title: "Production View 02", img: "/collections/spring-summer/factory-02.jpg", desc: "State-of-the-art manufacturing" },
-  { title: "Production View 03", img: "/collections/spring-summer/factory-03.jpg", desc: "State-of-the-art manufacturing" },
-  { title: "Production View 04", img: "/collections/spring-summer/factory-04.jpg", desc: "State-of-the-art manufacturing" },
-  { title: "Production View 05", img: "/collections/spring-summer/factory-05.jpg", desc: "State-of-the-art manufacturing" },
-  { title: "Production View 06", img: "/collections/spring-summer/factory-06.jpg", desc: "State-of-the-art manufacturing" },
-  { title: "Production View 07", img: "/collections/spring-summer/factory-07.jpg", desc: "State-of-the-art manufacturing" },
-  { title: "Production View 08", img: "/collections/spring-summer/factory-08.jpg", desc: "State-of-the-art manufacturing" },
-  { title: "Production View 09", img: "/collections/spring-summer/factory-09.jpg", desc: "State-of-the-art manufacturing" },
-  { title: "Production View 10", img: "/collections/spring-summer/factory-10.jpg", desc: "State-of-the-art manufacturing" },
-];
-
-const getNewFabrics = (_t: any): Card[] => [
+const getNewFabrics = (): Card[] => [
   // 27SS Theme 1 - Wool
   { title: "100% Wool 01", img: "/collections/new-fabrics/theme1-wool-01.JPG", desc: "Pure wool premium fabric" },
   { title: "100% Wool 02", img: "/collections/new-fabrics/theme1-wool-02.JPG", desc: "Pure wool premium fabric" },
@@ -281,6 +269,12 @@ const getNewFabrics = (_t: any): Card[] => [
   { title: "Theia 05", img: "/collections/new-fabrics/theme3-theia-05.JPG", desc: "Theia premium fabric" },
 ];
 
+const getModelCards = (t: TFunction): Card[] => Array.from({ length: 18 }, (_, index) => ({
+  title: t('collection.garmentAlt') + ' ' + String(index + 1).padStart(2, '0'),
+  img: '/assets/models/model_' + (index + 1) + '.jpg',
+  desc: t('collection.hero.subtitle'),
+}));
+
 const TabButton = ({
   active,
   onClick,
@@ -292,6 +286,8 @@ const TabButton = ({
 }) => (
   <button
     onClick={onClick}
+    role="tab"
+    aria-selected={active}
     className={`px-3 sm:px-4 py-2 rounded-full border text-xs sm:text-sm md:text-base transition ${
       active
         ? "bg-[#b35b28] text-white border-[#b35b28]"
@@ -302,12 +298,12 @@ const TabButton = ({
   </button>
 );
 
-const CardGrid = ({ items, t }: { items: Card[]; t: any }) => (
+const CardGrid = ({ items, t }: { items: Card[]; t: TFunction }) => (
   <section className="py-12 sm:py-16 px-4 sm:px-6 md:px-16 bg-gray-50 text-gray-800">
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
       {items.map((card) => (
         <div
-          key={card.title}
+          key={card.img}
           className="relative rounded-xl shadow-lg overflow-hidden group cursor-pointer transform transition hover:-translate-y-2 bg-white"
         >
           <img
@@ -328,32 +324,17 @@ const CardGrid = ({ items, t }: { items: Card[]; t: any }) => (
 
 export default function Collection() {
   const { t } = useTranslation();
-  const [tab, setTab] = useState<"spring" | "autumn" | "new" | "factory">("spring");
-
-  const items =
-    tab === "spring"
-      ? getSpringSummerFall(t)
-      : tab === "autumn"
-      ? getAutumnWinterFall(t)
-      : tab === "factory"
-      ? getFactoryCards(t)
-      : getNewFabrics(t);
-
-  const title =
-    tab === "spring"
-      ? t('collection.tabs.springSummer')
-      : tab === "autumn"
-      ? t('collection.tabs.autumnWinter')
-      : tab === "factory"
-      ? "Factory"
-      : t('collection.tabs.newFabrics');
+  const [tab, setTab] = useState<"swatches" | "garment">("swatches");
+  const items = tab === "swatches"
+    ? [...getSpringSummerFall(t), ...getAutumnWinterFall(), ...getNewFabrics()]
+    : getModelCards(t);
 
   return (
     <div className="bg-gray-50 text-gray-800">
       {/* HERO Section */}
-      <section className="relative h-[35vh] sm:h-[40vh] md:h-[55vh] flex items-center justify-center text-white text-center">
+      <section className="relative min-h-[45vh] md:min-h-[55vh] pt-24 pb-16 flex items-center justify-center text-white text-center">
         <img
-          src={`${R2_BASE}/assets/images/colorCardBanner.jpg`}
+          src={banner}
           alt={t('collection.hero.alt')}
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -370,26 +351,14 @@ export default function Collection() {
 
       {/* Tabs */}
       <div className="relative z-20 -mt-6 sm:-mt-8 md:-mt-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-10 mb-6 sm:mb-8">
-        <div className="bg-white shadow-md rounded-xl sm:rounded-2xl p-2 sm:p-3 flex gap-2 sm:gap-3 flex-wrap justify-center w-fit mx-auto">
-          <TabButton active={tab === "spring"} onClick={() => setTab("spring")}>
-            {t('collection.tabs.springSummer')}
-          </TabButton>
-          <TabButton active={tab === "autumn"} onClick={() => setTab("autumn")}>
-            {t('collection.tabs.autumnWinter')}
-          </TabButton>
-          <TabButton active={tab === "new"} onClick={() => setTab("new")}>
-            {t('collection.tabs.newFabrics')}
-          </TabButton>
-          <TabButton active={tab === "factory"} onClick={() => setTab("factory")}>
-            Factory
-          </TabButton>
+        <div className="bg-white shadow-md rounded-xl sm:rounded-2xl p-2 sm:p-3 flex gap-2 sm:gap-3 flex-wrap justify-center w-fit mx-auto" role="tablist" aria-label={t("collection.hero.title")}>
+          <TabButton active={tab === "swatches"} onClick={() => setTab("swatches")}>{t('collection.tabs.swatches')}</TabButton>
+          <TabButton active={tab === "garment"} onClick={() => setTab("garment")}>{t('collection.tabs.garment')}</TabButton>
         </div>
       </div>
 
       {/* Title + Grid */}
-      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-center text-[#b35b28] mb-4 sm:mb-6">
-        {title}
-      </h2>
+
       <CardGrid items={items} t={t} />
     </div>
   );

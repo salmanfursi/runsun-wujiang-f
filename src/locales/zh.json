@@ -1,15 +1,18 @@
 {
   "navbar": {
     "home": "首页",
-    "collections": "系列",
+    "collections": "色样与成衣",
     "sustainability": "可持续性",
-    "colorCards": "色卡",
+    "colorCards": "纱线",
     "contact": "联系我们",
     "search": "搜索...",
-    "logoAlt": "润盛纺织工厂标志"
+    "logoAlt": "润昌纺织工厂标志",
+    "companyCulture": "企业文化",
+    "menu": "菜单",
+    "language": "语言"
   },
   "heroSection": {
-    "title": "润盛工厂",
+    "title": "润昌纺织",
     "subtitle": "创新制造业的未来",
     "viewProducts": "查看产品",
     "alt1": "工厂视图1",
@@ -22,8 +25,8 @@
       "subtitle": "面向全球市场的高品质面料"
     },
     "exhibition": {
-      "title": "展览",
-      "subtitle": "发现我们之前的展览照片。",
+      "title": "润昌纺织",
+      "subtitle": "全流程打造优质毛纺纱线",
       "imageAlt1": "卓越品质产品",
       "imageAlt2": "广泛选择系列",
       "imageAlt3": "可持续发展重点",
@@ -47,10 +50,10 @@
     },
     "contactInfo": {
       "mainOffice": "我们的总部",
-      "mainAddress": "中国江苏省苏州市吴江区桃源镇袁新路319号",
+      "mainAddress": "中国江苏省苏州市吴江区桃源镇远欣路319号",
       "phoneNumber": "联系电话",
       "phoneNumbers": "+8651263858128 / +8618605732767",
-      "puyuanBranch": "润盛纺织（濮院分部）",
+      "puyuanBranch": "润昌纺织（濮院分部）",
       "puyuanAddress": "浙江省桐乡市濮院工贸路1638号",
       "email": "电子邮箱",
       "emailAddress": "ceo@okyarn.com"
@@ -61,18 +64,22 @@
       "emailPlaceholder": "请输入有效的电子邮件地址",
       "messagePlaceholder": "请输入您的消息",
       "submit": "提交"
-    }
+    },
+    "manufacturingAlt": "毛纺纱线生产流程",
+    "buildingAlt": "润昌纺织工厂大楼"
   },
   "collection": {
     "hero": {
-      "title": "探索我们的系列",
-      "subtitle": "发现为各种场合精心制作的季节性面料系列。",
+      "title": "色样与成衣",
+      "subtitle": "探索适配各类使用场景的季节性色样系列。",
       "alt": "系列横幅"
     },
     "tabs": {
       "springSummer": "春夏系列",
       "autumnWinter": "秋冬系列",
-      "newFabrics": "新品面料"
+      "newFabrics": "新品面料",
+      "swatches": "色样",
+      "garment": "成衣"
     },
     "products": {
       "lightweightCotton": {
@@ -111,7 +118,9 @@
         "title": "提花面料",
         "desc": "精密编织的复杂图案。"
       }
-    }
+    },
+    "garmentAlt": "成衣展示",
+    "swatchAlt": "季节性色样"
   },
   "sustainability": {
     "hero": {
@@ -127,7 +136,7 @@
         "desc": "长期致力于负责任采购、环保实践，并不断创新迈向更绿色的未来。"
       },
       "naturalFarm": {
-        "title": "润盛天然农场",
+        "title": "润昌天然农场",
         "desc": "与当地农场合作，确保透明度、动物福利和天然纤维种植。"
       },
       "carbonNeutrality": {
@@ -143,15 +152,15 @@
   "contact": {
     "hero": {
       "title": "联系我们",
-      "subtitle": "与润盛纺织全球办事处取得联系。",
+      "subtitle": "与润昌纺织及我们的业务团队取得联系。",
       "alt": "联系我们横幅"
     },
     "offices": {
-      "mainFactory": "润盛纺织工厂",
-      "mainFactoryAddress": "中国江苏省苏州市吴江区桃源镇袁新路319号",
+      "mainFactory": "润昌纺织工厂",
+      "mainFactoryAddress": "中国江苏省苏州市吴江区桃源镇远欣路319号",
       "mainFactoryPhone": "+86-512-63858128 / +86-18605732767",
       "mainFactoryEmail": "ceo@okyarn.com",
-      "puyuanBranch": "润盛纺织（濮院分部）",
+      "puyuanBranch": "润昌纺织（濮院分部）",
       "puyuanBranchAddress": "浙江省桐乡市濮院工贸路1638号",
       "puyuanBranchEmail": "bert@okyarn.com",
       "koreaOffice": "韩国办事处",
@@ -172,21 +181,28 @@
       "businessDept2Email": "Sales02@okyarn.com",
       "businessDept3": "业务三部",
       "businessDept3Contact": "Pete",
-      "businessDept3Email": "Sales03@okyarn.com"
+      "businessDept3Email": "Sales03@okyarn.com",
+      "businessDept4": "业务四部",
+      "businessDept4Contact": "HUA",
+      "businessDept4Email": "hua@okyarn.com"
     },
     "locations": {
       "title": "我们的位置",
-      "mapTitle": "润盛纺织工厂位置",
-      "mapQuery": "中国江苏省苏州市吴江区桃源镇袁新路319号"
+      "mapTitle": "润昌纺织工厂位置",
+      "mapQuery": "中国江苏省苏州市吴江区桃源镇远欣路319号"
     },
     "contactLabels": {
       "contact": "联系人"
-    }
+    },
+    "backHome": "返回首页",
+    "emailUs": "发送邮件",
+    "visitFactory": "欢迎莅临中国苏州的润昌纺织工厂",
+    "reach": "放眼全球 · 精益求精"
   },
   "colorCard": {
     "hero": {
-      "title": "探索我们的色卡",
-      "subtitle": "发现色卡、电子色卡和我们的模特展示。",
+      "title": "纱线",
+      "subtitle": "探索我们的毛纺纱线色卡。",
       "alt": "色卡横幅"
     },
     "tabs": {
@@ -224,75 +240,75 @@
         "desc": "数字化精选调色板，在各批次间具有精确的可重复性。"
       },
       "runsun9": {
-        "title": "润盛9号",
+        "title": "润昌9号",
         "desc": "数字化精选调色板，在各批次间具有精确的可重复性。"
       },
       "runsunA": {
-        "title": "润盛A号",
+        "title": "润昌A号",
         "desc": "数字化精选调色板，在各批次间具有精确的可重复性。"
       },
       "runsunJ": {
-        "title": "润盛J号",
+        "title": "润昌J号",
         "desc": "数字化精选调色板，在各批次间具有精确的可重复性。"
       },
       "runsunFangK": {
-        "title": "润盛方片K",
+        "title": "润昌方片K",
         "desc": "高级电子色卡，具有精确的色彩匹配，确保一致的品质。"
       },
       "runsunFangQ": {
-        "title": "润盛方片Q",
+        "title": "润昌方片Q",
         "desc": "先进电子色卡，展现流行趋势和现代调色板。"
       },
       "runsunMeiHua6": {
-        "title": "润盛梅花6",
+        "title": "润昌梅花6",
         "desc": "电子色卡，展现经典优雅与永恒色彩组合。"
       },
       "runsunMeiHua7": {
-        "title": "润盛梅花7",
+        "title": "润昌梅花7",
         "desc": "高级色彩系列，色调鲜艳，清晰度非凡。"
       },
       "runsunMeiHua8": {
-        "title": "润盛梅花8",
+        "title": "润昌梅花8",
         "desc": "精致色卡，专为当代纺织应用设计。"
       },
       "runsunMeiHua9": {
-        "title": "润盛梅花9",
+        "title": "润昌梅花9",
         "desc": "数字调色板，色调浓郁，色彩还原精准。"
       },
       "runsunMeiHuaA": {
-        "title": "润盛梅花A",
+        "title": "润昌梅花A",
         "desc": "高级色卡，拥有优雅色调，适合高端面料系列。"
       },
       "runsunMeiHuaQ": {
-        "title": "润盛梅花Q",
+        "title": "润昌梅花Q",
         "desc": "先进电子色卡，专业级色彩准确度。"
       },
       "runsunHongTaoA": {
-        "title": "润盛红桃A",
+        "title": "润昌红桃A",
         "desc": "高级电子色卡，展现温暖色调和精致调色板。"
       },
       "runsunHongTaoJ": {
-        "title": "润盛红桃J",
+        "title": "润昌红桃J",
         "desc": "色卡色调鲜艳，专为现代纺织应用设计。"
       },
       "runsunHongTaoK": {
-        "title": "润盛红桃K",
+        "title": "润昌红桃K",
         "desc": "数字调色板，展现大胆色彩和卓越色彩一致性。"
       },
       "runsunHongTaoQ": {
-        "title": "润盛红桃Q",
+        "title": "润昌红桃Q",
         "desc": "高级色彩系列，色彩匹配精准，品质专业。"
       },
       "runsunHeiTao6": {
-        "title": "润盛黑桃6",
+        "title": "润昌黑桃6",
         "desc": "电子色卡，色调浓郁深邃，适合高端面料。"
       },
       "runsunHeiTao7": {
-        "title": "润盛黑桃7",
+        "title": "润昌黑桃7",
         "desc": "先进调色板，色彩组合精致，清晰度出众。"
       },
       "runsunHeiTao8": {
-        "title": "润盛黑桃8",
+        "title": "润昌黑桃8",
         "desc": "高级电子色卡，专业级色彩准确度。"
       },
       "eColorPlaceholder": {
@@ -319,13 +335,16 @@
         "title": "模特05",
         "desc": "美学简约与永恒设计。"
       }
-    }
+    },
+    "newest": "最新色卡",
+    "older": "往期色卡",
+    "orderNote": "顶部为最新色卡，向下滚动可查看往期色卡。"
   },
   "footer": {
     "company": {
       "title": "公司",
-      "name": "润盛纺织工厂",
-      "address": "中国江苏省苏州市吴江区桃源镇袁新路319号",
+      "name": "润昌纺织工厂",
+      "address": "中国江苏省苏州市吴江区桃源镇远欣路319号",
       "phone": "+86-512-63858128 / +86-18605732767",
       "email": "ceo@okyarn.com",
       "aboutUs": "关于我们",
@@ -340,7 +359,10 @@
       "cottonLinen": "棉麻",
       "ecoFibers": "环保纤维",
       "recycledMaterials": "再生材料",
-      "customSolutions": "定制纺织品解决方案"
+      "customSolutions": "定制纺织品解决方案",
+      "woolYarns": "羊毛纱线",
+      "cashmereBlends": "羊绒混纺",
+      "specialtyAnimalFibers": "特殊动物纤维"
     },
     "resources": {
       "title": "资源",
@@ -356,7 +378,7 @@
       "linkedin": "领英",
       "instagram": "Instagram"
     },
-    "copyright": "{{year}} 润盛纺织有限公司 版权所有。"
+    "copyright": "{{year}} 润昌纺织有限公司 版权所有。"
   },
   "common": {
     "loading": "加载中...",
@@ -366,5 +388,23 @@
   "language": {
     "english": "EN",
     "chinese": "中文"
+  },
+  "culture": {
+    "title": "企业文化",
+    "events": "企业活动",
+    "eventsSubtitle": "聚力同心路，共筑润昌魂",
+    "cooperation": "校企合作",
+    "cooperationSubtitle": "创新是可持续发展的核心驱动力",
+    "exhibitions": "全球巡展",
+    "exhibitionsSlogan": "经纬通四海，纱线赴国际。",
+    "exhibitionsDescription": "踏遍国际纺织展会，以一缕优质毛纺纱线为媒介，搭建跨地域的时尚对话桥梁。跨越山海的展出足迹，是润昌拓宽全球视野的见证：一次次真诚交流，让稳定可靠的中国制造纱线，收获世界各地合作伙伴的长久信赖。",
+    "cities": "巴黎 · 纽约 · 东京 · 香港 · 上海",
+    "factoryAlt": "润昌纺织工厂",
+    "eventAlt": "润昌团队活动",
+    "cooperationAlt": "校企合作团队",
+    "exhibitionAlt": "国际纺织展会",
+    "previous": "上一张",
+    "next": "下一张",
+    "image": "图片"
   }
 }

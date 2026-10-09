@@ -1,15 +1,18 @@
 {
   "navbar": {
     "home": "Home",
-    "collections": "Collections",
+    "collections": "Swatches & Garment",
     "sustainability": "Sustainability",
-    "colorCards": "Color Cards",
+    "colorCards": "Yarn",
     "contact": "Contact",
     "search": "Search...",
-    "logoAlt": "Runsun Textile Factory Logo"
+    "logoAlt": "Runsun Textile Factory Logo",
+    "companyCulture": "Company Culture",
+    "menu": "Menu",
+    "language": "Language"
   },
   "heroSection": {
-    "title": "Runsun Factory",
+    "title": "Runsun Textile",
     "subtitle": "Innovating the Future of Manufacturing",
     "viewProducts": "View Products",
     "alt1": "Factory View 1",
@@ -22,8 +25,8 @@
       "subtitle": "Quality fabrics for global markets"
     },
     "exhibition": {
-      "title": "Exhibition",
-      "subtitle": "Discover our previous exhibition photos.",
+      "title": "Runsun Textile",
+      "subtitle": "Produce Premium Wool Yarns via Full Integrated Manufacturing Processes.",
       "imageAlt1": "Top Quality Product",
       "imageAlt2": "Wide Range Collection",
       "imageAlt3": "Sustainability Focus",
@@ -61,18 +64,22 @@
       "emailPlaceholder": "Enter a valid email address",
       "messagePlaceholder": "Enter your message",
       "submit": "SUBMIT"
-    }
+    },
+    "manufacturingAlt": "Wool yarn manufacturing process",
+    "buildingAlt": "Runsun Textile factory building"
   },
   "collection": {
     "hero": {
-      "title": "Explore Our Collections",
-      "subtitle": "Discover seasonal fabric collections crafted for every occasion.",
+      "title": "Swatches & Garment",
+      "subtitle": "Discover seasonal swatch collections crafted for every occasion.",
       "alt": "Collections Hero Banner"
     },
     "tabs": {
       "springSummer": "Spring And Summer",
       "autumnWinter": "Autumn And Winter",
-      "newFabrics": "New Fabrics"
+      "newFabrics": "New Fabrics",
+      "swatches": "Swatches",
+      "garment": "Garment"
     },
     "products": {
       "lightweightCotton": {
@@ -111,7 +118,9 @@
         "title": "Patterned Jacquard",
         "desc": "Intricate patterns woven with precision."
       }
-    }
+    },
+    "garmentAlt": "Garment showcase",
+    "swatchAlt": "Seasonal swatch"
   },
   "sustainability": {
     "hero": {
@@ -143,7 +152,7 @@
   "contact": {
     "hero": {
       "title": "Contact Us",
-      "subtitle": "Get in touch with Runsun Textile offices worldwide.",
+      "subtitle": "Get in touch with Runsun Textile and our sales team.",
       "alt": "Contact Hero Banner"
     },
     "offices": {
@@ -172,7 +181,10 @@
       "businessDept2Email": "Sales02@okyarn.com",
       "businessDept3": "Business Department Three",
       "businessDept3Contact": "Pete",
-      "businessDept3Email": "Sales03@okyarn.com"
+      "businessDept3Email": "Sales03@okyarn.com",
+      "businessDept4": "Business Department Four",
+      "businessDept4Contact": "HUA",
+      "businessDept4Email": "hua@okyarn.com"
     },
     "locations": {
       "title": "Our Location",
@@ -181,12 +193,16 @@
     },
     "contactLabels": {
       "contact": "Contact"
-    }
+    },
+    "backHome": "Back to Home",
+    "emailUs": "Email Us",
+    "visitFactory": "Visit our main factory in Suzhou, China",
+    "reach": "Global Reach • Local Excellence"
   },
   "colorCard": {
     "hero": {
-      "title": "Explore Our Cards",
-      "subtitle": "Discover Color Cards, E-Color Cards, and our Model Showcase.",
+      "title": "Yarn",
+      "subtitle": "Explore our wool yarn color cards.",
       "alt": "Color Cards Hero Banner"
     },
     "tabs": {
@@ -236,35 +252,35 @@
         "desc": "Digitally curated palette with precise repeatability across batches."
       },
       "runsunFangK": {
-        "title": "Runsun Square K",
+        "title": "Runsun Diamond K",
         "desc": "Premium digital color card with precise color matching for consistent quality."
       },
       "runsunFangQ": {
-        "title": "Runsun Square Q",
+        "title": "Runsun Diamond Q",
         "desc": "Advanced digital color card featuring seasonal trends and modern palettes."
       },
       "runsunMeiHua6": {
-        "title": "Runsun Plum 6",
+        "title": "Runsun Club 6",
         "desc": "Digital color card showcasing classic elegance with timeless color combinations."
       },
       "runsunMeiHua7": {
-        "title": "Runsun Plum 7",
+        "title": "Runsun Club 7",
         "desc": "Premium color collection with vibrant hues and exceptional clarity."
       },
       "runsunMeiHua8": {
-        "title": "Runsun Plum 8",
+        "title": "Runsun Club 8",
         "desc": "Sophisticated color card designed for contemporary textile applications."
       },
       "runsunMeiHua9": {
-        "title": "Runsun Plum 9",
+        "title": "Runsun Club 9",
         "desc": "Digital palette featuring rich tones and precise color reproduction."
       },
       "runsunMeiHuaA": {
-        "title": "Runsun Plum A",
+        "title": "Runsun Club A",
         "desc": "Premium color card with elegant shades for high-end fabric collections."
       },
       "runsunMeiHuaQ": {
-        "title": "Runsun Plum Q",
+        "title": "Runsun Club Q",
         "desc": "Advanced digital color card with professional-grade color accuracy."
       },
       "runsunHongTaoA": {
@@ -319,7 +335,10 @@
         "title": "Model 05",
         "desc": "Aesthetic simplicity and timeless design."
       }
-    }
+    },
+    "newest": "Latest color cards",
+    "older": "Previous color cards",
+    "orderNote": "The color cards at the top are new. Scroll down to view the older color cards below."
   },
   "footer": {
     "company": {
@@ -340,7 +359,10 @@
       "cottonLinen": "Cotton & Linen",
       "ecoFibers": "Eco-friendly Fibers",
       "recycledMaterials": "Recycled Materials",
-      "customSolutions": "Custom Textile Solutions"
+      "customSolutions": "Custom Textile Solutions",
+      "woolYarns": "Wool Yarns",
+      "cashmereBlends": "Cashmere Blends",
+      "specialtyAnimalFibers": "Specialty Animal Fibers"
     },
     "resources": {
       "title": "Resources",
@@ -366,5 +388,23 @@
   "language": {
     "english": "EN",
     "chinese": "中文"
+  },
+  "culture": {
+    "title": "Company Culture",
+    "events": "Company Events",
+    "eventsSubtitle": "Unite as One, Forge Runsun’s Spirit",
+    "cooperation": "Industry–University Cooperation",
+    "cooperationSubtitle": "Innovation fuels sustainable development at its core.",
+    "exhibitions": "Global Exhibitions",
+    "exhibitionsSlogan": "Global Threads, Worldwide Presence.",
+    "exhibitionsDescription": "We showcase premium wool yarns at global textile fairs, connecting fashion across regions and winning long-term trust with reliable Chinese manufacturing.",
+    "cities": "Paris · New York · Tokyo · Hong Kong · Shanghai",
+    "factoryAlt": "Runsun Textile factory",
+    "eventAlt": "Runsun team event",
+    "cooperationAlt": "Industry–university cooperation team",
+    "exhibitionAlt": "International textile exhibition",
+    "previous": "Previous image",
+    "next": "Next image",
+    "image": "Image"
   }
 }

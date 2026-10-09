@@ -1,8 +1,10 @@
+import manufacturing1 from "../assets/client/manufacturing-1.jpg";
+import manufacturing2 from "../assets/client/manufacturing-2.jpg";
+import manufacturing3 from "../assets/client/manufacturing-3.jpg";
+import building from "../assets/client/factory-building-enhanced.png";
 // import FeatureCard from "../components/featureCard";
 import HeroSection from "../components/heroSection";
 import { useTranslation } from "react-i18next";
-import VideoPlayer from "../components/VideoPlayer";
-import { R2_BASE } from "../lib/r2";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -23,75 +25,29 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Product Boxes */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {/* Box 1 */}
-          <div className="relative group overflow-hidden rounded-xl sm:rounded-2xl shadow-lg">
-            <img
-              src={`${R2_BASE}/assets/images/Products (1).jpg`}
-              alt={t('home.exhibition.imageAlt1')}
-              className="w-full h-48 sm:h-56 md:h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 text-white text-center px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <h3 className="text-base sm:text-lg md:text-xl font-bold">{t('home.exhibition.products.topQuality.title')}</h3>
-              <p className="text-xs sm:text-sm mt-2">
-                {t('home.exhibition.products.topQuality.desc')}
-              </p>
-            </div>
-          </div>
-
-          {/* Box 2 */}
-          <div className="relative group overflow-hidden rounded-xl sm:rounded-2xl shadow-lg">
-            <img
-              src={`${R2_BASE}/assets/images/Products (2).jpg`}
-              alt={t('home.exhibition.imageAlt2')}
-              className="w-full h-48 sm:h-56 md:h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 text-white text-center px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <h3 className="text-base sm:text-lg md:text-xl font-bold">{t('home.exhibition.products.wideRange.title')}</h3>
-              <p className="text-xs sm:text-sm mt-2">
-                {t('home.exhibition.products.wideRange.desc')}
-              </p>
-            </div>
-          </div>
-
-          {/* Box 3 */}
-          <div className="relative group overflow-hidden rounded-xl sm:rounded-2xl shadow-lg">
-            <img
-              src={`${R2_BASE}/assets/images/Products (3).jpg`}
-              alt={t('home.exhibition.imageAlt3')}
-              className="w-full h-48 sm:h-56 md:h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 text-white text-center px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <h3 className="text-base sm:text-lg md:text-xl font-bold">{t('home.exhibition.products.sustainability.title')}</h3>
-              <p className="text-xs sm:text-sm mt-2">
-                {t('home.exhibition.products.sustainability.desc')}
-              </p>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {[manufacturing1, manufacturing2, manufacturing3].map((image,index) => (
+            <img key={image} src={image} alt={t('home.manufacturingAlt') + ' ' + (index + 1)} className="w-full h-40 md:h-52 object-cover rounded-xl shadow-md" loading="lazy" />
+          ))}
         </div>
       </section>
 
-      {/* Explore Yarn Products Section */}
-      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-16 sm:py-20 md:py-24 flex justify-center items-center">
+      {/* Factory Building Section */}
+      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-8 sm:py-10 md:py-12 flex justify-center items-center">
         {/* Bottom Card (orange background) */}
         <div className="absolute w-11/12 sm:w-10/12 md:w-9/12 inset-0 mx-auto my-auto bg-orange-400 rounded-2xl sm:rounded-3xl transform rotate-1 shadow-xl"></div>
 
-        {/* Top Card (video with error handling) */}
-        <div className="relative bg-white rounded-2xl sm:rounded-3xl shadow-2xl max-w-5xl w-full p-0 overflow-hidden transform -rotate-1">
-          <div className="w-full aspect-video sm:h-80">
-            <VideoPlayer
-              src={`${R2_BASE}/assets/video/yarnFactory.mp4`}
-              fallback={
-                <div className="w-full h-full bg-gradient-to-br from-[#1b2b3d] to-[#b35b28] flex items-center justify-center">
-                  <div className="text-center text-white px-4">
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">{t('home.videoSection.title')}</h3>
-                    <p className="text-xs sm:text-sm opacity-80">Video temporarily unavailable</p>
-                  </div>
-                </div>
-              }
-            />
-          </div>
+        {/* Building image above the orange background */}
+        <div className="relative bg-white rounded-2xl sm:rounded-3xl shadow-2xl max-w-5xl w-full aspect-[3344/941] p-0 overflow-hidden transform -rotate-1">
+          <img
+            src={building}
+            alt={t('home.buildingAlt')}
+            width={1672}
+            height={941}
+            decoding="async"
+            className="w-full h-full object-cover object-center block"
+            loading="lazy"
+          />
         </div>
       </section>
 

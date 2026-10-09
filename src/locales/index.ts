@@ -34,6 +34,8 @@ i18n
 
 i18n.on('languageChanged', (lng) => {
   localStorage.setItem('language', lng);
+  document.documentElement.lang = lng === 'zh' ? 'zh-CN' : 'en';
 });
 
 export default i18n;
+document.documentElement.lang = i18n.language === 'zh' ? 'zh-CN' : 'en';

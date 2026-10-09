@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import contactBanner from "../assets/BG1.jpeg";
 import { Link } from "react-router-dom";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 
@@ -11,29 +12,6 @@ export default function Contact() {
       address: t("contact.offices.mainFactoryAddress"),
       phone: t("contact.offices.mainFactoryPhone"),
       email: t("contact.offices.mainFactoryEmail"),
-    },
-    {
-      title: t("contact.offices.puyuanBranch"),
-      address: t("contact.offices.puyuanBranchAddress"),
-      email: t("contact.offices.puyuanBranchEmail"),
-    },
-    {
-      title: t("contact.offices.koreaOffice"),
-      address: t("contact.offices.koreaOfficeAddress"),
-      email: t("contact.offices.koreaOfficeEmail"),
-    },
-    {
-      title: t("contact.offices.hongKongOffice"),
-      address: t("contact.offices.hongKongOfficeAddress"),
-      email: t("contact.offices.hongKongOfficeEmail"),
-    },
-    {
-      title: t("contact.offices.japanOffice"),
-      email: t("contact.offices.japanOfficeEmail"),
-    },
-    {
-      title: t("contact.offices.ukOffice"),
-      email: t("contact.offices.ukOfficeEmail"),
     },
     {
       title: t("contact.offices.businessDept1"),
@@ -50,6 +28,11 @@ export default function Contact() {
       name: t("contact.offices.businessDept3Contact"),
       email: t("contact.offices.businessDept3Email"),
     },
+    {
+      title: t("contact.offices.businessDept4"),
+      name: t("contact.offices.businessDept4Contact"),
+      email: t("contact.offices.businessDept4Email"),
+    },
   ];
 
   return (
@@ -57,7 +40,7 @@ export default function Contact() {
       {/* HERO SECTION WITH BACKGROUND IMAGE */}
       <section
         className="relative h-[55vh] sm:h-[65vh] md:h-[75vh] flex items-center justify-center text-white text-center overflow-hidden bg-cover bg-center"
-        style={{ backgroundImage: "url('/BGcontact.jpg')" }}
+        style={{ backgroundImage: `url(${contactBanner})` }}
       >
         {/* Dark overlay so text is readable */}
         <div className="absolute inset-0 bg-black/55" />
@@ -69,7 +52,7 @@ export default function Contact() {
           <div className="mb-4 sm:mb-6">
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-xs sm:text-sm">
               <span className="w-2 h-2 bg-[#b35b28] rounded-full animate-pulse" />
-              <span className="font-medium">Global Reach • Local Excellence</span>
+              <span className="font-medium">{t("contact.reach")}</span>
             </div>
           </div>
 
@@ -86,14 +69,14 @@ export default function Contact() {
               to="/"
               className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white text-[#1b2b3d] font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-lg"
             >
-              Back to Home
+              {t("contact.backHome")}
             </Link>
 
             <a
               href="mailto:ceo@okyarn.com"
               className="px-6 sm:px-8 py-2.5 sm:py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[#1b2b3d] transition-all duration-300"
             >
-              Email Us
+              {t("contact.emailUs")}
             </a>
           </div>
         </div>
@@ -181,16 +164,14 @@ export default function Contact() {
               {t("contact.locations.title")}
             </h2>
             <p className="text-white/80 text-xs sm:text-sm">
-              Visit our main factory in Suzhou, China
+              {t("contact.visitFactory")}
             </p>
           </div>
 
           <div className="relative h-[300px] sm:h-[400px] md:h-[500px]">
             <iframe
               title={t("contact.locations.mapTitle")}
-              src={`https://www.google.com/maps?q=${t(
-                "contact.locations.mapQuery"
-              )}&output=embed`}
+              src={`https://www.google.com/maps?q=${encodeURIComponent(t("contact.locations.mapQuery"))}&output=embed`}
               width="100%"
               height="100%"
               style={{ border: 0 }}

@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
-import BG1 from "../assets/BG1.jpeg";
-import BG2 from "../assets/BG2.jpg";
-import BG3 from "../assets/BG3.jpg";
+import BG1 from "../assets/hero1.jpg";
+import BG2 from "../assets/hero2.jpg";
+import BG3 from "../assets/hero3.jpg";
 
 
 export default function HeroSection() {
@@ -44,7 +45,7 @@ export default function HeroSection() {
     <section className="relative w-full h-screen overflow-hidden">
       {/* Carousel Background */}
       <div className="absolute inset-0 w-full h-full" ref={emblaRef}>
-        <div className="embla__container flex">
+        <div className="embla__container flex h-full">
           {slides.map((slide) => (
             <div
               key={slide.id}
@@ -62,14 +63,14 @@ export default function HeroSection() {
       </div>
 
       {/* Static Text */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-black/30">
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-black/30 px-6 pt-24">
         <h1 className="text-4xl md:text-6xl font-bold">{t('heroSection.title')}</h1>
         <p className="mt-4 text-lg md:text-2xl">
           {t('heroSection.subtitle')}
         </p>
-         <button className="mt-5 px-6 py-3 border-2 border-orange-400 text-white font-semibold rounded-lg transition-colors duration-300 hover:bg-orange-400 hover:text-white">
+         <Link to="/yarn" className="mt-5 px-6 py-3 border-2 border-orange-400 text-white font-semibold rounded-lg transition-colors duration-300 hover:bg-orange-400 hover:text-white">
         {t('heroSection.viewProducts')}
-      </button>
+      </Link>
       </div>
     </section>
   );

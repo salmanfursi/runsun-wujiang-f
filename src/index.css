@@ -68,3 +68,7 @@
     @apply bg-background text-foreground;
   }
 }
+html { scroll-behavior: smooth; }
+button, a, input { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 2px solid #b35b28; outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

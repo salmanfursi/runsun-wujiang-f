@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Search, Languages, Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import sunmunLogo from "../assets/sunmun-logo.jpeg";
+import sunmunLogo from "../assets/runsun-logo-padded.png";
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
+  const { pathname } = useLocation();
+  useEffect(() => { setMobileMenuOpen(false); window.scrollTo(0, 0); }, [pathname]);
   const [activeLang, setActiveLang] = useState(i18n.language === 'zh' ? '中文' : 'EN');
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -14,6 +16,7 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -32,31 +35,34 @@ export default function Navbar() {
 
   const navLinks = [
     { to: '/', label: t('navbar.home') },
-    { to: '/Collections', label: t('navbar.collections') },
-    { to: '/Sustainability', label: t('navbar.sustainability') },
-    { to: '/color-cards', label: t('navbar.colorCards') },
+    { to: '/yarn', label: t('navbar.colorCards') },
+    { to: '/collections', label: t('navbar.collections') },
+    { to: '/sustainability', label: t('navbar.sustainability') },
+    { to: '/company-culture', label: t('navbar.companyCulture') },
   ];
 
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
       scrolled ? 'bg-white shadow-md' : 'bg-transparent'
     }`}>
-      <div className="px-4 sm:px-6 py-3 flex items-center justify-between">
+      <div className="px-4 sm:px-6 py-1.5 grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-3 xl:gap-6">
         {/* Left side - Logo on mobile, Navigation on desktop */}
         <div className="flex items-center gap-4">
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className={`lg:hidden p-2 rounded-lg transition ${
+            className={`xl:hidden p-2 rounded-lg transition ${
               scrolled ? 'text-gray-800 hover:bg-gray-100' : 'text-white hover:bg-white/10'
             }`}
-            aria-label="Toggle menu"
+            aria-label={t("navbar.menu")}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-6 font-medium">
+          <div className="hidden xl:flex gap-4 text-sm font-medium whitespace-nowrap">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
@@ -70,16 +76,16 @@ export default function Navbar() {
         </div>
 
         {/* Center - Logo */}
-        <div className="absolute left-1/2 transform -translate-x-1/2">
-          <img
+        <div className="shrink-0">
+          <Link to="/" aria-label={t("heroSection.title")}><img
             src={sunmunLogo}
             alt={t('navbar.logoAlt')}
-            className="h-8 sm:h-10 md:h-12 object-contain"
-          />
+            className="h-10 sm:h-11 md:h-12 w-auto object-contain block"
+          /></Link>
         </div>
 
         {/* Right side - Desktop */}
-        <div className="hidden lg:flex items-center space-x-4">
+        <div className="hidden xl:flex items-center space-x-3 justify-self-end whitespace-nowrap">
           {/* Search bar */}
           <div className="relative">
             <Search className={`absolute left-2 top-1/2 transform -translate-y-1/2 w-4 h-4 ${scrolled ? 'text-gray-600' : 'text-gray-800'}`} />
@@ -149,7 +155,7 @@ export default function Navbar() {
         {/* Mobile Contact button */}
         <Link
           to="/contact"
-          className={`lg:hidden px-4 py-2 rounded-full font-medium text-sm transition ${
+          className={`xl:hidden justify-self-end whitespace-nowrap px-4 py-2 rounded-full font-medium text-sm transition ${
             scrolled
               ? 'bg-orange-400 text-white'
               : 'bg-orange-400 text-white'
@@ -161,7 +167,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-50">
+        <div className="xl:hidden fixed inset-0 z-50">
           {/* Backdrop */}
           <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
@@ -169,11 +175,11 @@ export default function Navbar() {
           />
 
           {/* Menu Panel */}
-          <div className="absolute right-0 top-0 bottom-0 w-80 max-w-full bg-white shadow-2xl animate-in slide-in-from-right duration-300">
+          <div id="mobile-menu" className="absolute right-0 top-0 bottom-0 w-80 max-w-full bg-white shadow-2xl animate-in slide-in-from-right duration-300">
             <div className="p-6 space-y-6 h-full overflow-y-auto">
               {/* Close button */}
               <div className="flex items-center justify-between mb-4">
-                <h2 className="text-xl font-bold text-gray-800">Menu</h2>
+                <h2 className="text-xl font-bold text-gray-800">{t("navbar.menu")}</h2>
                 <button
                   onClick={() => setMobileMenuOpen(false)}
                   className="p-2 rounded-lg hover:bg-gray-100 transition"
@@ -212,7 +218,7 @@ export default function Navbar() {
               <div className="pt-4 border-t">
                 <div className="flex items-center gap-3 mb-3">
                   <Languages className="w-5 h-5 text-gray-600" />
-                  <span className="font-medium text-gray-800">Language</span>
+                  <span className="font-medium text-gray-800">{t("navbar.language")}</span>
                 </div>
                 <div className="flex border rounded-lg overflow-hidden">
                   <button

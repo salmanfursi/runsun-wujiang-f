@@ -2,11 +2,12 @@ import { useState, useRef, useEffect } from 'react';
 
 interface VideoPlayerProps {
   src: string;
+  poster?: string;
   className?: string;
   fallback?: React.ReactNode;
 }
 
-export default function VideoPlayer({ src, className = '', fallback }: VideoPlayerProps) {
+export default function VideoPlayer({ src, poster, className = '', fallback }: VideoPlayerProps) {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -60,6 +61,7 @@ export default function VideoPlayer({ src, className = '', fallback }: VideoPlay
       <video
         ref={videoRef}
         src={src}
+        poster={poster}
         className="w-full h-full object-cover"
         autoPlay
         loop

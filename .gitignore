@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 .vercel
 .env
+
+# Temporary browser checks and rendering tools
+/tmp/qa/
