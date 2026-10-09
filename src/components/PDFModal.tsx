@@ -1,19 +1,189 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import type { PDFDocumentLoadingTask, PDFDocumentProxy, PDFPageProxy } from "pdfjs-dist";
+import pdfWorker from "pdfjs-dist/build/pdf.worker.min.mjs?url";
+
+interface PDFPageCanvasProps {
+  document: PDFDocumentProxy;
+  pageNumber: number;
+  scrollRoot: HTMLDivElement | null;
+  onFirstPageRendered: () => void;
+}
+
+const PDFPageCanvas: React.FC<PDFPageCanvasProps> = ({
+  document,
+  pageNumber,
+  scrollRoot,
+  onFirstPageRendered,
+}) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [isNearViewport, setIsNearViewport] = useState(pageNumber === 1);
+  const [isRendered, setIsRendered] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (pageNumber === 1) {
+      setIsNearViewport(true);
+      return;
+    }
+
+    const container = containerRef.current;
+    if (!container) return;
+    if (!("IntersectionObserver" in window)) {
+      setIsNearViewport(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsNearViewport(true);
+          observer.disconnect();
+        }
+      },
+      { root: scrollRoot, rootMargin: "1000px 0px" },
+    );
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, [pageNumber, scrollRoot]);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    const canvas = canvasRef.current;
+    if (!isNearViewport || !container || !canvas) return;
+
+    let cancelled = false;
+    let renderTask: ReturnType<PDFPageProxy["render"]> | null = null;
+
+    const renderPage = async () => {
+      try {
+        const page = await document.getPage(pageNumber);
+        if (cancelled) return;
+
+        const baseViewport = page.getViewport({ scale: 1 });
+        const availableWidth = Math.max(container.clientWidth - 32, 1);
+        const scale = Math.min(availableWidth / baseViewport.width, 1.5);
+        const viewport = page.getViewport({ scale });
+        const outputScale = Math.min(window.devicePixelRatio || 1, 2);
+
+        canvas.width = Math.floor(viewport.width * outputScale);
+        canvas.height = Math.floor(viewport.height * outputScale);
+        canvas.style.width = `${Math.floor(viewport.width)}px`;
+        canvas.style.height = `${Math.floor(viewport.height)}px`;
+
+        renderTask = page.render({
+          canvas,
+          viewport,
+          transform:
+            outputScale === 1
+              ? undefined
+              : [outputScale, 0, 0, outputScale, 0, 0],
+        });
+        await renderTask.promise;
+
+        if (!cancelled) {
+          setIsRendered(true);
+          if (pageNumber === 1) onFirstPageRendered();
+        }
+      } catch (renderError) {
+        if (cancelled) return;
+        console.error(`Failed to render PDF page ${pageNumber}:`, renderError);
+        setError(
+          renderError instanceof Error
+            ? renderError.message
+            : String(renderError),
+        );
+      }
+    };
+
+    void renderPage();
+    return () => {
+      cancelled = true;
+      renderTask?.cancel();
+    };
+  }, [document, isNearViewport, onFirstPageRendered, pageNumber]);
+
+  return (
+    <div
+      ref={containerRef}
+      className="flex min-h-[60vh] w-full max-w-full shrink-0 items-center justify-center bg-gray-200 p-4"
+    >
+      {error ? (
+        <p className="text-center text-sm text-red-700">
+          Unable to render page {pageNumber}: {error}
+        </p>
+      ) : (
+        <canvas
+          ref={canvasRef}
+          className={`max-w-full bg-white shadow-md ${isRendered ? "opacity-100" : "opacity-0"}`}
+          aria-label={`PDF page ${pageNumber}`}
+        />
+      )}
+    </div>
+  );
+};
 
 interface PDFModalProps {
   isOpen: boolean;
   pdfUrl: string;
   title: string;
+  previewSrc: string;
   onClose: () => void;
 }
 
-const PDFModal: React.FC<PDFModalProps> = ({ isOpen, pdfUrl, title, onClose }) => {
-  const [isLoaded, setIsLoaded] = useState(false);
+const PDFModal: React.FC<PDFModalProps> = ({
+  isOpen,
+  pdfUrl,
+  title,
+  previewSrc,
+  onClose,
+}) => {
+  const [pdfDocument, setPdfDocument] = useState<PDFDocumentProxy | null>(null);
+  const [isPageRendered, setIsPageRendered] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const viewerRef = useRef<HTMLDivElement>(null);
+  const handleFirstPageRendered = React.useCallback(() => {
+    setIsPageRendered(true);
+  }, []);
 
-  // Reset loaded state when URL changes
   useEffect(() => {
-    setIsLoaded(false);
-  }, [pdfUrl]);
+    setPdfDocument(null);
+    setIsPageRendered(false);
+    setError(null);
+
+    if (!isOpen || !pdfUrl) return;
+
+    let cancelled = false;
+    let loadingTask: PDFDocumentLoadingTask | null = null;
+
+    const loadPdf = async () => {
+      try {
+        const pdfjsLib = await import("pdfjs-dist");
+        if (cancelled) return;
+        pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker;
+        loadingTask = pdfjsLib.getDocument({
+          url: pdfUrl,
+          rangeChunkSize: 64 * 1024,
+        });
+        const document = await loadingTask.promise;
+        if (!cancelled) setPdfDocument(document);
+      } catch (loadError) {
+        if (!cancelled) {
+          console.error("Failed to load PDF:", loadError);
+          setError(
+            loadError instanceof Error ? loadError.message : String(loadError),
+          );
+        }
+      }
+    };
+
+    void loadPdf();
+
+    return () => {
+      cancelled = true;
+      if (loadingTask) void loadingTask.destroy();
+    };
+  }, [isOpen, pdfUrl]);
 
   if (!isOpen) return null;
 
@@ -54,23 +224,41 @@ const PDFModal: React.FC<PDFModalProps> = ({ isOpen, pdfUrl, title, onClose }) =
           </button>
         </div>
 
-        {/* PDF Viewer - Optimized with loading state */}
-        <div className="flex-1 overflow-hidden bg-gray-100 relative">
-          {!isLoaded && (
-            <div className="absolute inset-0 flex items-center justify-center bg-gray-100 z-10">
-              <div className="flex flex-col items-center gap-4">
-                <div className="w-12 h-12 border-4 border-[#b35b28] border-t-transparent rounded-full animate-spin"></div>
-                <p className="text-gray-600 text-sm">Loading PDF...</p>
+        <div className="relative flex-1 min-h-0 bg-gray-100">
+          <div
+            ref={viewerRef}
+            className="absolute inset-0 flex flex-col items-center gap-4 overflow-y-auto overflow-x-hidden py-4"
+          >
+            {pdfDocument &&
+              Array.from({ length: pdfDocument.numPages }, (_, index) => (
+                <PDFPageCanvas
+                  key={`${pdfUrl}-${index + 1}`}
+                  document={pdfDocument}
+                  pageNumber={index + 1}
+                  scrollRoot={viewerRef.current}
+                  onFirstPageRendered={handleFirstPageRendered}
+                />
+              ))}
+          </div>
+          {!isPageRendered && (
+            <div className="absolute inset-0 z-10 flex items-center justify-center">
+              <img
+                src={previewSrc}
+                alt=""
+                className="absolute inset-0 w-full h-full object-contain"
+              />
+              <div className="absolute inset-0 flex items-center justify-center bg-white/30">
+                <div className="flex flex-col items-center gap-4">
+                  {!error && (
+                    <div className="w-12 h-12 border-4 border-[#b35b28] border-t-transparent rounded-full animate-spin"></div>
+                  )}
+                  <p className="max-w-lg text-center text-sm text-gray-700">
+                    {error ? `Unable to load PDF: ${error}` : "Loading PDF..."}
+                  </p>
+                </div>
               </div>
             </div>
           )}
-          <iframe
-            src={`${pdfUrl}#toolbar=0&navpanes=0&scrollbar=0`}
-            className="absolute inset-0 w-full h-full border-none"
-            title={`PDF: ${title}`}
-            onLoad={() => setIsLoaded(true)}
-            loading="eager"
-          />
         </div>
 
         {/* Footer - Compact and optimized */}
@@ -99,4 +287,3 @@ const PDFModal: React.FC<PDFModalProps> = ({ isOpen, pdfUrl, title, onClose }) =
 };
 
 export default PDFModal;
-

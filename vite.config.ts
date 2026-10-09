@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import path from "path";
+import { R2_BASE } from "./src/lib/r2";
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -30,6 +31,13 @@ export default defineConfig({
     port: 5173,
     host: true,
     open: false,
+    proxy: {
+      "/pdf-proxy": {
+        target: R2_BASE,
+        changeOrigin: true,
+        rewrite: (requestPath) => requestPath.replace(/^\/pdf-proxy/, ""),
+      },
+    },
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-i18next'],

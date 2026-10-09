@@ -1,6 +1,6 @@
 import type { TFunction } from "i18next";
 import banner from "../assets/colorCardBanner.jpg";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { R2_BASE } from "../lib/r2";
 
@@ -298,6 +298,57 @@ const TabButton = ({
   </button>
 );
 
+const CollectionImage = ({
+  src,
+  alt,
+  className,
+}: {
+  src: string;
+  alt: string;
+  className: string;
+}) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [shouldLoad, setShouldLoad] = useState(false);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    if (!("IntersectionObserver" in window)) {
+      setShouldLoad(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldLoad(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "900px 0px" },
+    );
+
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={containerRef} className={`${className} bg-gray-100`}>
+      {shouldLoad && (
+        <img
+          src={src}
+          alt={alt}
+          className="h-full w-full object-cover"
+          loading="eager"
+          decoding="async"
+          fetchPriority="low"
+        />
+      )}
+    </div>
+  );
+};
+
 const CardGrid = ({ items, t }: { items: Card[]; t: TFunction }) => (
   <section className="py-12 sm:py-16 px-4 sm:px-6 md:px-16 bg-gray-50 text-gray-800">
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
@@ -306,11 +357,10 @@ const CardGrid = ({ items, t }: { items: Card[]; t: TFunction }) => (
           key={card.img}
           className="relative rounded-xl shadow-lg overflow-hidden group cursor-pointer transform transition hover:-translate-y-2 bg-white"
         >
-          <img
+          <CollectionImage
             src={`${R2_BASE}${card.img}`}
             alt={`${card.title} ${t('collection.hero.alt')}`}
-            className="w-full h-48 sm:h-56 md:h-64 object-cover"
-            loading="lazy"
+            className="w-full h-48 sm:h-56 md:h-64"
           />
           <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex flex-col items-center justify-center text-center p-3 sm:p-4">
             <h3 className="text-base sm:text-lg md:text-xl font-bold text-yellow-300 mb-2">{card.title}</h3>

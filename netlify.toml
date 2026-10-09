@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "/pdf-proxy/assets/pdf/*"
+  to = "https://pub-1caf5c2bd1f148e7a44ecf5c0c0692be.r2.dev/assets/pdf/:splat"
+  status = 200
+  force = true

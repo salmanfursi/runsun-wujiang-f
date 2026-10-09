@@ -6,6 +6,12 @@
   "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/pdf-proxy/assets/pdf/(.*)",
+      "destination": "https://pub-1caf5c2bd1f148e7a44ecf5c0c0692be.r2.dev/assets/pdf/$1"
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
