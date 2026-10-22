@@ -42,7 +42,7 @@ export default function Footer() {
         <div className="space-y-2">
           <h4 className="text-[#b35b28] font-semibold">{t('footer.products.title')}</h4>
           <ul className="space-y-1 text-gray-300">
-            {['woolYarns', 'cashmereBlends', 'specialtyAnimalFibers', 'cottonLinen', 'ecoFibers'].map(key => <li key={key}>{t('footer.products.' + key)}</li>)}
+            {['customSolutions', 'woolYarns', 'cashmereBlends', 'specialtyAnimalFibers', 'cottonLinen', 'ecoFibers'].map(key => <li key={key}>{t('footer.products.' + key)}</li>)}
           </ul>
         </div>
 

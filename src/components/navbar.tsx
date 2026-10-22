@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Search, Languages, Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import sunmunLogo from "../assets/runsun-logo-padded.png";
+import runsunNavbarLogo from "../assets/runsun-navbar.jpeg";
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
@@ -77,10 +77,10 @@ export default function Navbar() {
 
         {/* Center - Logo */}
         <div className="shrink-0">
-          <Link to="/" aria-label={t("heroSection.title")}><img
-            src={sunmunLogo}
+          <Link to="/" aria-label={t("heroSection.title")} className="block"><img
+            src={runsunNavbarLogo}
             alt={t('navbar.logoAlt')}
-            className="h-10 sm:h-11 md:h-12 w-auto object-contain block"
+            className="w-32 sm:w-36 md:w-40 h-auto object-contain block"
           /></Link>
         </div>
 

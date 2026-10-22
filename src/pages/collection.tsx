@@ -1,5 +1,5 @@
 import type { TFunction } from "i18next";
-import banner from "../assets/colorCardBanner.jpg";
+import banner from "../assets/client/factory-front.png";
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { R2_BASE } from "../lib/r2";
@@ -41,7 +41,6 @@ const getSpringSummerFall = (t: TFunction): Card[] => [
   { title: "Weaving Series 06", img: "/collections/spring-summer/weaving-two-06.jpg", desc: "Contemporary weaving designs" },
   { title: "Weaving Series 07", img: "/collections/spring-summer/weaving-two-07.jpg", desc: "Contemporary weaving designs" },
   { title: "Weaving Series 08", img: "/collections/spring-summer/weaving-two-08.jpg", desc: "Contemporary weaving designs" },
-  { title: "Weaving Series 09", img: "/collections/spring-summer/weaving-two-09.jpg", desc: "Contemporary weaving designs" },
   // Spring/Summer Main Collection
   { title: t('collection.products.lightweightCotton.title'), img: "/collections/spring-summer/spring-summer-01.jpg", desc: t('collection.products.lightweightCotton.desc') },
   { title: t('collection.products.linenBlend.title'), img: "/collections/spring-summer/spring-summer-02.png", desc: t('collection.products.linenBlend.desc') },
