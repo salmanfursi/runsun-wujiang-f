@@ -259,7 +259,6 @@ const ColorCard = () => {
         </div>
       </section>
       <div className="relative -mt-6 mx-auto w-fit rounded-full bg-white px-8 py-3 shadow-md font-medium text-[#b35b28]">{t("colorCard.tabs.colorCards")}</div>
-      <p className="text-center px-6 mt-8 text-gray-600">{t("colorCard.orderNote")}</p>
       <section aria-label={t("colorCard.newest")}><h2 className="sr-only">{t("colorCard.newest")}</h2><CardGrid items={getBaseCards(t)} onCardClick={handleCardClick} /></section>
       <section aria-label={t("colorCard.older")}><h2 className="sr-only">{t("colorCard.older")}</h2><CardGrid items={getEColorCards(t)} onCardClick={handleCardClick} /></section>
       <PDFModal

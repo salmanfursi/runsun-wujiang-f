@@ -19,7 +19,7 @@ import globalExhibition5 from "../assets/client/global-exhibition-5.png";
 import globalExhibition6 from "../assets/client/global-exhibition-6.png";
 import globalExhibition7 from "../assets/client/global-exhibition-7.png";
 
-const cooperationImages = [cooperation1, cooperation2, cooperation3, cooperation4];
+const cooperationImages = [cooperation1, cooperation2, cooperation4, cooperation3];
 const exhibitions = [globalExhibition1, globalExhibition2, globalExhibition3, globalExhibition4, globalExhibition5, globalExhibition6, globalExhibition7];
 export default function CompanyCulture() {
   const { t } = useTranslation();

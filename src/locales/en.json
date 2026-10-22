@@ -12,8 +12,8 @@
     "language": "Language"
   },
   "heroSection": {
-    "title": "Craftsmanship Persists, Yarn Splendor Blooms.",
-    "subtitle": "Runsun Textile",
+    "title": "Runsun Textile",
+    "subtitle": "Craftsmanship Persists, Yarn Splendor Blooms.",
     "viewProducts": "View Products",
     "alt1": "Factory View 1",
     "alt2": "Factory View 2",
@@ -337,8 +337,7 @@
       }
     },
     "newest": "Latest color cards",
-    "older": "Previous color cards",
-    "orderNote": "The color cards at the top are new. Scroll down to view the older color cards below."
+    "older": "Previous color cards"
   },
   "footer": {
     "company": {
@@ -362,7 +361,9 @@
       "customSolutions": "Custom Textile Solutions",
       "woolYarns": "Wool Yarns",
       "cashmereBlends": "Cashmere Blends",
-      "specialtyAnimalFibers": "Specialty Animal Fibers"
+      "specialtyAnimalFibers": "Specialty Animal Fibers",
+      "customSolutionsChinese": "定制纺织品解决方案",
+      "customSolutionsEnglish": "Custom Textile Solutions"
     },
     "resources": {
       "title": "Resources",

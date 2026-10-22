@@ -12,8 +12,8 @@
     "language": "语言"
   },
   "heroSection": {
-    "title": "润循匠心 昌绽纱彩",
-    "subtitle": "润昌纺织",
+    "title": "润昌纺织",
+    "subtitle": "润循匠心 昌绽纱彩",
     "viewProducts": "查看产品",
     "alt1": "工厂视图1",
     "alt2": "工厂视图2",
@@ -337,8 +337,7 @@
       }
     },
     "newest": "最新色卡",
-    "older": "往期色卡",
-    "orderNote": "顶部为最新色卡，向下滚动可查看往期色卡。"
+    "older": "往期色卡"
   },
   "footer": {
     "company": {
@@ -362,7 +361,9 @@
       "customSolutions": "定制纺织品解决方案",
       "woolYarns": "羊毛纱线",
       "cashmereBlends": "羊绒混纺",
-      "specialtyAnimalFibers": "特殊动物纤维"
+      "specialtyAnimalFibers": "特殊动物纤维",
+      "customSolutionsChinese": "定制纺织品解决方案",
+      "customSolutionsEnglish": "Custom Textile Solutions"
     },
     "resources": {
       "title": "资源",

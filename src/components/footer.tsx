@@ -10,7 +10,8 @@ import { SiXiaohongshu } from "react-icons/si"; // Red Note (Xiaohongshu)
 import { useTranslation } from "react-i18next";
 
 export default function Footer() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isChinese = i18n.resolvedLanguage?.startsWith('zh') ?? i18n.language.startsWith('zh');
   return (
     <footer className="bg-[#1b2b3d] text-white py-12">
       <div className="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -42,8 +43,11 @@ export default function Footer() {
         <div className="space-y-2">
           <h4 className="text-[#b35b28] font-semibold">{t('footer.products.title')}</h4>
           <ul className="space-y-1 text-gray-300">
-            {['customSolutions', 'woolYarns', 'cashmereBlends', 'specialtyAnimalFibers', 'cottonLinen', 'ecoFibers'].map(key => <li key={key}>{t('footer.products.' + key)}</li>)}
+            {['woolYarns', 'cashmereBlends', 'specialtyAnimalFibers', 'cottonLinen', 'ecoFibers'].map(key => <li key={key}>{t('footer.products.' + key)}</li>)}
           </ul>
+          <div className="space-y-1 text-gray-300">
+            <p>{t(isChinese ? 'footer.products.customSolutionsChinese' : 'footer.products.customSolutionsEnglish')}</p>
+          </div>
         </div>
 
         {/* --- COMPANY --- */}

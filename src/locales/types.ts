@@ -238,6 +238,8 @@ export interface TranslationKeys {
       ecoFibers: string;
       recycledMaterials: string;
       customSolutions: string;
+      customSolutionsChinese: string;
+      customSolutionsEnglish: string;
     };
     resources: {
       title: string;
