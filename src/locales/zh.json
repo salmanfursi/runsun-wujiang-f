@@ -337,7 +337,30 @@
       }
     },
     "newest": "最新色卡",
-    "older": "往期色卡"
+    "older": "往期色卡",
+    "newCards": {
+      "collection-book-aw27": "综合本",
+      "kirwan-la-tour-carnet": "麒麟/拉图嘉丽",
+      "mouton": "木桐",
+      "dazzling": "耀眼",
+      "cloud-fluff": "云绒",
+      "iris": "鸢尾",
+      "peony": "芍药",
+      "poria": "茯苓",
+      "radiant": "明媚",
+      "haut-brion-ii": "侯伯王",
+      "cler-milon": "克拉米伦",
+      "talbot": "大宝",
+      "lalagune": "拉拉贡",
+      "seawool": "杜特/大麦/加特美",
+      "durfort-vivens-ii": "杜霍",
+      "lynch-moussas": "浪琴慕莎",
+      "margaux-lafite-ii": "玛歌/拉菲",
+      "pichon-duhame": "碧尚女爵/都夏美隆",
+      "cos-labory": "科斯拉伯丽",
+      "gis-cours": "美人鱼",
+      "lynch-bages": "靓次伯"
+    }
   },
   "footer": {
     "company": {

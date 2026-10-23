@@ -337,7 +337,30 @@
       }
     },
     "newest": "Latest color cards",
-    "older": "Previous color cards"
+    "older": "Previous color cards",
+    "newCards": {
+      "collection-book-aw27": "Collection Book AW 2027/28",
+      "kirwan-la-tour-carnet": "Kirwan / La Tour-Carnet",
+      "mouton": "Mouton",
+      "dazzling": "Dazzling",
+      "cloud-fluff": "Cloud Fluff",
+      "iris": "Iris",
+      "peony": "Peony",
+      "poria": "Poria",
+      "radiant": "Radiant",
+      "haut-brion-ii": "Haut-Brion II",
+      "cler-milon": "Clerc Milon",
+      "talbot": "Talbot",
+      "lalagune": "La Lagune",
+      "seawool": "Seawool Collection",
+      "durfort-vivens-ii": "Durfort-Vivens II",
+      "lynch-moussas": "Lynch-Moussas",
+      "margaux-lafite-ii": "Margaux II / Lafite II",
+      "pichon-duhame": "Pichon / Duhart-Milon",
+      "cos-labory": "Cos Labory",
+      "gis-cours": "Giscours",
+      "lynch-bages": "Lynch-Bages"
+    }
   },
   "footer": {
     "company": {

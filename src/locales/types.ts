@@ -155,6 +155,7 @@ export interface TranslationKeys {
       eColorCards: string;
       models: string;
     };
+    newCards: Record<string, string>;
     products: {
       cashmere: {
         title: string;
