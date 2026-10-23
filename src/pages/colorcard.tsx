@@ -38,7 +38,8 @@ const getNewCards = (): Card[] => [
   ["Lynch-Bages · 靓次伯", "lynch-bages"],
 ].map(([title, slug]) => ({
   title,
-  img: `/colorcard/new/${slug}.jpg`,
+  // ?v= bypasses broken copies cached while the covers were still uploading.
+  img: `/colorcard/new/${slug}.jpg?v=2`,
   desc: "2026 color card",
   pdfLink: `/assets/pdf/new-colorcards/${slug}.pdf`,
 }));
