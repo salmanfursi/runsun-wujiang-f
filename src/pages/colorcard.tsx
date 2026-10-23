@@ -22,6 +22,27 @@ import { R2_BASE } from "../lib/r2";
 
 type Card = { title: string; img: string; desc: string; pdfLink?: string };
 
+// Newest color-card PDFs supplied in the August 2026 archive.
+const getNewCards = (): Card[] => [
+  ["Haut-Brion II · 侯伯王", "haut-brion-ii"],
+  ["Clerc Milon · 克拉米伦", "cler-milon"],
+  ["Talbot · 大宝", "talbot"],
+  ["La Lagune · 拉拉贡", "lalagune"],
+  ["Seawool Collection · 杜特/大麦/加特美", "seawool"],
+  ["Durfort-Vivens II · 杜霍", "durfort-vivens-ii"],
+  ["Lynch-Moussas · 浪琴慕莎", "lynch-moussas"],
+  ["Margaux II / Lafite II · 玛歌/拉菲", "margaux-lafite-ii"],
+  ["Pichon / Duhart-Milon · 碧尚女爵/都夏美隆", "pichon-duhame"],
+  ["Cos Labory · 科斯拉伯丽", "cos-labory"],
+  ["Giscours · 美人鱼", "gis-cours"],
+  ["Lynch-Bages · 靓次伯", "lynch-bages"],
+].map(([title, slug]) => ({
+  title,
+  img: `/colorcard/new/${slug}.jpg`,
+  desc: "2026 color card",
+  pdfLink: `/assets/pdf/new-colorcards/${slug}.pdf`,
+}));
+
 // --- Color Cards ---
 const getBaseCards = (t: TFunction): Card[] => [
   {
@@ -259,7 +280,7 @@ const ColorCard = () => {
         </div>
       </section>
       <div className="relative -mt-6 mx-auto w-fit rounded-full bg-white px-8 py-3 shadow-md font-medium text-[#b35b28]">{t("colorCard.tabs.colorCards")}</div>
-      <section aria-label={t("colorCard.newest")}><h2 className="sr-only">{t("colorCard.newest")}</h2><CardGrid items={getBaseCards(t)} onCardClick={handleCardClick} /></section>
+      <section aria-label={t("colorCard.newest")}><h2 className="sr-only">{t("colorCard.newest")}</h2><CardGrid items={[...getNewCards(), ...getBaseCards(t)]} onCardClick={handleCardClick} /></section>
       <section aria-label={t("colorCard.older")}><h2 className="sr-only">{t("colorCard.older")}</h2><CardGrid items={getEColorCards(t)} onCardClick={handleCardClick} /></section>
       <PDFModal
         isOpen={pdfModal.isOpen}
