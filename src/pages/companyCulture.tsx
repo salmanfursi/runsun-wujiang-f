@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import factory from "../assets/client/factory-aerial.png";
+import factory from "../assets/client/factory-aerial-hd.jpg";
 import eventTeam from "../assets/client/event-team.png";
 import eventFeature from "../assets/client/event-feature.png";
 import eventActivity1 from "../assets/client/event-activity-1.png";

@@ -1,5 +1,5 @@
 import type { TFunction } from "i18next";
-import banner from "../assets/client/factory-front.png";
+import banner from "../assets/client/factory-front-hd.jpg";
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { R2_BASE } from "../lib/r2";

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Search, Languages, Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import runsunNavbarLogo from "../assets/runsun-navbar.jpeg";
+import runsunNavbarLogo from "../assets/runsun-navbar-hd.jpg";
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();

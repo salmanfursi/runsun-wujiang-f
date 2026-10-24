@@ -14,7 +14,7 @@ import cardCover12 from "../assets/colorcards/runsun-heitao-6.jpg";
 import cardCover13 from "../assets/colorcards/runsun-heitao-7.jpg";
 import cardCover14 from "../assets/colorcards/runsun-heitao-8.jpg";
 import type { TFunction } from "i18next";
-import banner from "../assets/client/factory-aerial.png";
+import banner from "../assets/client/factory-aerial-hd.jpg";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import PDFModal from "../components/PDFModal";
