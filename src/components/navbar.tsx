@@ -33,6 +33,8 @@ export default function Navbar() {
     };
   }, [mobileMenuOpen]);
 
+  const isActive = (to: string) => pathname === to || (to === "/yarn" && pathname === "/color-cards");
+
   const navLinks = [
     { to: '/', label: t('navbar.home') },
     { to: '/yarn', label: t('navbar.colorCards') },
@@ -67,7 +69,8 @@ export default function Navbar() {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`${scrolled ? 'text-gray-800' : 'text-white'} relative px-1 py-1 hover:border-b-2 hover:border-orange-400 transition`}
+                aria-current={isActive(link.to) ? "page" : undefined}
+                className={`${scrolled ? 'text-gray-800' : 'text-white'} relative px-1 py-1 border-b-2 hover:border-orange-400 transition ${isActive(link.to) ? 'border-orange-400 font-semibold' : 'border-transparent'}`}
               >
                 {link.label}
               </Link>
@@ -182,6 +185,7 @@ export default function Navbar() {
                 <h2 className="text-xl font-bold text-gray-800">{t("navbar.menu")}</h2>
                 <button
                   onClick={() => setMobileMenuOpen(false)}
+                  aria-label={t("common.close")}
                   className="p-2 rounded-lg hover:bg-gray-100 transition"
                 >
                   <X className="w-6 h-6 text-gray-800" />
@@ -195,7 +199,8 @@ export default function Navbar() {
                     key={link.to}
                     to={link.to}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block px-4 py-3 rounded-lg text-gray-800 hover:bg-orange-50 hover:text-orange-600 font-medium transition"
+                    aria-current={isActive(link.to) ? "page" : undefined}
+                    className={`block px-4 py-3 rounded-lg hover:bg-orange-50 hover:text-orange-600 font-medium transition ${isActive(link.to) ? 'bg-orange-50 text-orange-600' : 'text-gray-800'}`}
                   >
                     {link.label}
                   </Link>

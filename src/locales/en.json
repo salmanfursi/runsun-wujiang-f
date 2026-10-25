@@ -151,7 +151,9 @@
         "title": "Certifications & Accolades",
         "desc": "Industry-recognized certifications and awards validating our journey toward sustainable manufacturing."
       }
-    }
+    },
+    "bgAlt": "Sustainability background",
+    "certificateAlt": "Certificate"
   },
   "contact": {
     "hero": {
@@ -364,6 +366,15 @@
       "cos-labory": "Cos Labory",
       "gis-cours": "Giscours",
       "lynch-bages": "Lynch-Bages"
+    },
+    "pdf": {
+      "view": "View PDF",
+      "loading": "Loading PDF...",
+      "loadError": "Unable to load PDF",
+      "hint": "View and download the PDF",
+      "download": "Download PDF",
+      "downloadShort": "Download",
+      "close": "Close PDF"
     }
   },
   "footer": {
@@ -411,7 +422,11 @@
   "common": {
     "loading": "Loading...",
     "error": "An error occurred",
-    "tryAgain": "Please try again"
+    "tryAgain": "Please try again",
+    "errorTitle": "Something went wrong",
+    "errorMessage": "Sorry, this page could not be displayed. Please reload and try again.",
+    "reload": "Reload Page",
+    "close": "Close"
   },
   "language": {
     "english": "EN",

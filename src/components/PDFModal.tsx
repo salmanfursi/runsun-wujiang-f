@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import type { PDFDocumentLoadingTask, PDFDocumentProxy, PDFPageProxy } from "pdfjs-dist";
 import pdfWorker from "pdfjs-dist/build/pdf.worker.min.mjs?url";
+import { useTranslation } from "react-i18next";
 
 interface PDFPageCanvasProps {
   document: PDFDocumentProxy;
@@ -138,6 +139,7 @@ const PDFModal: React.FC<PDFModalProps> = ({
   previewSrc,
   onClose,
 }) => {
+  const { t } = useTranslation();
   const [pdfDocument, setPdfDocument] = useState<PDFDocumentProxy | null>(null);
   const [isPageRendered, setIsPageRendered] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -216,7 +218,7 @@ const PDFModal: React.FC<PDFModalProps> = ({
           <button
             onClick={onClose}
             className="w-10 h-10 rounded-full hover:bg-gray-200 text-gray-500 hover:text-gray-700 flex items-center justify-center transition-all duration-200 shrink-0"
-            aria-label="Close PDF"
+            aria-label={t("colorCard.pdf.close")}
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -253,7 +255,7 @@ const PDFModal: React.FC<PDFModalProps> = ({
                     <div className="w-12 h-12 border-4 border-[#b35b28] border-t-transparent rounded-full animate-spin"></div>
                   )}
                   <p className="max-w-lg text-center text-sm text-gray-700">
-                    {error ? `Unable to load PDF: ${error}` : "Loading PDF..."}
+                    {error ? `${t("colorCard.pdf.loadError")}: ${error}` : t("colorCard.pdf.loading")}
                   </p>
                 </div>
               </div>
@@ -267,7 +269,7 @@ const PDFModal: React.FC<PDFModalProps> = ({
             <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            View and download the PDF
+            {t("colorCard.pdf.hint")}
           </p>
           <a
             href={pdfUrl}
@@ -277,8 +279,8 @@ const PDFModal: React.FC<PDFModalProps> = ({
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg>
-            <span className="hidden sm:inline">Download PDF</span>
-            <span className="sm:hidden">Download</span>
+            <span className="hidden sm:inline">{t("colorCard.pdf.download")}</span>
+            <span className="sm:hidden">{t("colorCard.pdf.downloadShort")}</span>
           </a>
         </div>
       </div>

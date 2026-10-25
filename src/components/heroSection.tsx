@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useTranslation } from "react-i18next";
-import { useState, useEffect } from "react";
 import BG1 from "../assets/hero1.jpg";
 import BG2 from "../assets/hero2.jpg";
 import BG3 from "../assets/hero3.jpg";
@@ -10,12 +9,6 @@ import BG3 from "../assets/hero3.jpg";
 
 export default function HeroSection() {
   const { t } = useTranslation();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   // Initialize Embla carousel with autoplay
   const [emblaRef] = useEmblaCarousel(
     { loop: true },
@@ -27,19 +20,6 @@ export default function HeroSection() {
     { id: 2, image: BG2, alt: t('heroSection.alt2') },
     { id: 3, image: BG3, alt: t('heroSection.alt3') },
   ];
-
-  if (!mounted) {
-    return (
-      <section className="relative w-full h-screen overflow-hidden bg-[#1b2b3d]">
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
-          <div className="animate-pulse">
-            <div className="w-16 h-16 border-4 border-white/30 border-t-orange-400 rounded-full"></div>
-          </div>
-          <p className="mt-4 text-lg">Loading...</p>
-        </div>
-      </section>
-    );
-  }
 
   return (
     <section className="relative w-full h-screen overflow-hidden">

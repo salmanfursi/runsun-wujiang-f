@@ -1,6 +1,7 @@
 import CompanyCulture from "./pages/companyCulture";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { Component, type ErrorInfo, type ReactNode } from "react";
+import i18n from "./locales";
 import Home from "./pages/home";
 import Collection from "./pages/collection";
 import Products from "./pages/products";
@@ -10,56 +11,43 @@ import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import ColorCard from "./pages/colorcard";
 
-function ErrorBoundary({ children, error }: { children: React.ReactNode; error: Error | null }) {
-  if (error) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-100">
-        <div className="text-center p-8">
-          <h1 className="text-4xl font-bold text-red-600 mb-4">Something went wrong</h1>
-          <p className="text-gray-600 mb-4">{error.message}</p>
-          <button
-            onClick={() => window.location.reload()}
-            className="px-6 py-3 bg-[#b35b28] text-white rounded-lg hover:bg-[#b35b28]/80"
-          >
-            Reload Page
-          </button>
-        </div>
-      </div>
-    );
+// Only catches errors thrown while rendering, so harmless browser warnings
+// (e.g. "ResizeObserver loop") no longer replace the whole site.
+class ErrorBoundary extends Component<{ children: ReactNode }, { hasError: boolean }> {
+  state = { hasError: false };
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
   }
-  return <>{children}</>;
+
+  componentDidCatch(error: Error, info: ErrorInfo) {
+    console.error("Render error:", error, info.componentStack);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-100">
+          <div className="text-center p-8">
+            <h1 className="text-4xl font-bold text-[#b35b28] mb-4">{i18n.t("common.errorTitle")}</h1>
+            <p className="text-gray-600 mb-4">{i18n.t("common.errorMessage")}</p>
+            <button
+              onClick={() => window.location.reload()}
+              className="px-6 py-3 bg-[#b35b28] text-white rounded-lg hover:bg-[#b35b28]/80"
+            >
+              {i18n.t("common.reload")}
+            </button>
+          </div>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
 }
 
 export default function App() {
-  const [error, setError] = useState<Error | null>(null);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-
-    // Handle global errors
-    const handleError = (event: ErrorEvent) => {
-      console.error('Global error:', event.error);
-      setError(new Error(event.message));
-      event.preventDefault();
-    };
-
-    window.addEventListener('error', handleError);
-    return () => window.removeEventListener('error', handleError);
-  }, []);
-
-  if (!mounted) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-[#1b2b3d]">
-        <div className="animate-pulse">
-          <div className="w-16 h-16 border-4 border-white/30 border-t-orange-400 rounded-full"></div>
-        </div>
-      </div>
-    );
-  }
-
   return (
-    <ErrorBoundary error={error}>
+    <ErrorBoundary>
       <Router>
         <Navbar />
         <Routes>

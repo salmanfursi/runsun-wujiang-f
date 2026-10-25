@@ -43,7 +43,7 @@ export default function Sustainability() {
         <div className="absolute inset-0">
           <img
             src={`${R2_BASE}/sustanibility/sustanibilitybg.jpg`}
-            alt="Sustainability Background"
+            alt={t('sustainability.bgAlt')}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50" />
@@ -102,7 +102,7 @@ export default function Sustainability() {
                 <div className="aspect-square">
                   <img
                     src={cert.image}
-                    alt={`Certificate ${cert.id}`}
+                    alt={`${t('sustainability.certificateAlt')} ${cert.id}`}
                     className="w-full h-full object-contain p-1 sm:p-2"
                   />
                 </div>

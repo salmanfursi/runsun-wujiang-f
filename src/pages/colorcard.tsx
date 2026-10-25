@@ -219,7 +219,9 @@ const CardGrid = ({
 }: {
   items: Card[];
   onCardClick: (card: Card) => void;
-}) => (
+}) => {
+  const { t } = useTranslation();
+  return (
   <div className="max-w-7xl mx-auto px-6 py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     {items.map((card) => (
       <button
@@ -227,7 +229,7 @@ const CardGrid = ({
         type="button"
         onClick={() => onCardClick(card)}
         className="group block w-full rounded-xl bg-white text-left shadow-md overflow-hidden focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#b35b28]"
-        aria-label={`View PDF: ${card.title}`}
+        aria-label={`${t("colorCard.pdf.view")}: ${card.title}`}
       >
         <figure>
           <img
@@ -248,7 +250,8 @@ const CardGrid = ({
       </button>
     ))}
   </div>
-);
+  );
+};
 
 const ColorCard = () => {
   const { t } = useTranslation();

@@ -7,3 +7,10 @@
   to = "https://pub-1caf5c2bd1f148e7a44ecf5c0c0692be.r2.dev/assets/pdf/:splat"
   status = 200
   force = true
+
+# SPA fallback: lets /collections, /yarn etc. load on refresh or direct link.
+# Must stay after the pdf-proxy rule; real files are still served first.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

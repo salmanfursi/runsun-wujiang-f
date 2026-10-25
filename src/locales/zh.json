@@ -151,7 +151,9 @@
         "title": "认证与荣誉",
         "desc": "行业认可的认证和奖项，验证我们向可持续制造发展的历程。"
       }
-    }
+    },
+    "bgAlt": "可持续发展背景",
+    "certificateAlt": "证书"
   },
   "contact": {
     "hero": {
@@ -364,6 +366,15 @@
       "cos-labory": "柯斯拉伯丽",
       "gis-cours": "美人鱼",
       "lynch-bages": "靓次伯"
+    },
+    "pdf": {
+      "view": "查看PDF",
+      "loading": "正在加载PDF...",
+      "loadError": "无法加载PDF",
+      "hint": "查看并下载PDF",
+      "download": "下载PDF",
+      "downloadShort": "下载",
+      "close": "关闭PDF"
     }
   },
   "footer": {
@@ -411,7 +422,11 @@
   "common": {
     "loading": "加载中...",
     "error": "发生错误",
-    "tryAgain": "请重试"
+    "tryAgain": "请重试",
+    "errorTitle": "页面出错了",
+    "errorMessage": "抱歉，页面无法显示。请重新加载后再试。",
+    "reload": "重新加载页面",
+    "close": "关闭"
   },
   "language": {
     "english": "EN",
