@@ -120,7 +120,11 @@
       }
     },
     "garmentAlt": "Garment showcase",
-    "swatchAlt": "Seasonal swatch"
+    "swatchAlt": "Seasonal swatch",
+    "springSummerCard": {
+      "title": "Spring Summer",
+      "desc": "Light seasonal fabrics"
+    }
   },
   "sustainability": {
     "hero": {

@@ -120,7 +120,11 @@
       }
     },
     "garmentAlt": "成衣展示",
-    "swatchAlt": "季节性色样"
+    "swatchAlt": "季节性色样",
+    "springSummerCard": {
+      "title": "春夏",
+      "desc": "轻薄季节面料"
+    }
   },
   "sustainability": {
     "hero": {
