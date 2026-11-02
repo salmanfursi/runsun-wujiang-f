@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import factory from "../assets/client/factory-aerial-hd.jpg";
@@ -6,17 +6,17 @@ import eventTeam from "../assets/client/hd-originals/event-team.jpeg";
 import eventFeature from "../assets/client/hd-originals/event-feature.png";
 import eventActivity1 from "../assets/client/hd-originals/event-activity-1.jpeg";
 import eventActivity2 from "../assets/client/hd-originals/event-activity-2.jpeg";
-import cooperation1 from "../assets/client/hd-originals/cooperation-1.jpg";
-import cooperation2 from "../assets/client/hd-originals/cooperation-2.jpeg";
-import cooperation3 from "../assets/client/hd-originals/cooperation-3.jpg";
-import cooperation4 from "../assets/client/hd-originals/cooperation-4.jpg";
-import globalExhibition1 from "../assets/client/hd-originals/global-exhibition-1.jpg";
-import globalExhibition2 from "../assets/client/hd-originals/global-exhibition-2.jpg";
-import globalExhibition3 from "../assets/client/hd-originals/global-exhibition-3.jpg";
-import globalExhibition4 from "../assets/client/hd-originals/global-exhibition-4.jpg";
-import globalExhibition5 from "../assets/client/hd-originals/global-exhibition-5.jpeg";
-import globalExhibition6 from "../assets/client/hd-originals/global-exhibition-6.jpeg";
-import globalExhibition7 from "../assets/client/hd-originals/global-exhibition-7.jpeg";
+import cooperation1 from "../assets/client/web/cooperation-1.jpg";
+import cooperation2 from "../assets/client/web/cooperation-2.jpg";
+import cooperation3 from "../assets/client/web/cooperation-3.jpg";
+import cooperation4 from "../assets/client/web/cooperation-4.jpg";
+import globalExhibition1 from "../assets/client/web/global-exhibition-1.jpg";
+import globalExhibition2 from "../assets/client/web/global-exhibition-2.jpg";
+import globalExhibition3 from "../assets/client/web/global-exhibition-3.jpg";
+import globalExhibition4 from "../assets/client/web/global-exhibition-4.jpg";
+import globalExhibition5 from "../assets/client/web/global-exhibition-5.jpg";
+import globalExhibition6 from "../assets/client/web/global-exhibition-6.jpg";
+import globalExhibition7 from "../assets/client/web/global-exhibition-7.jpg";
 
 const cooperationImages = [
   cooperation1,
@@ -37,6 +37,12 @@ export default function CompanyCulture() {
   const { t } = useTranslation();
   const [cooperationSelected, setCooperationSelected] = useState(0);
   const [selected, setSelected] = useState(0);
+  // Preload every carousel photo so switching slides is instant
+  useEffect(() => {
+    [...cooperationImages, ...exhibitions].forEach((src) => {
+      new Image().src = src;
+    });
+  }, []);
   return (
     <main className="bg-[#faf8f2] text-gray-800">
       <section className="relative min-h-[45vh] md:min-h-[60vh] flex items-center justify-center pt-24 pb-16">
