@@ -8,6 +8,8 @@ import eventActivity1 from "../assets/client/hd-originals/event-activity-1.jpeg"
 import eventActivity2 from "../assets/client/hd-originals/event-activity-2.jpeg";
 import cooperation1 from "../assets/client/hd-originals/cooperation-1.jpg";
 import cooperation2 from "../assets/client/hd-originals/cooperation-2.jpeg";
+import cooperation3 from "../assets/client/hd-originals/cooperation-3.jpg";
+import cooperation4 from "../assets/client/hd-originals/cooperation-4.jpg";
 import globalExhibition1 from "../assets/client/hd-originals/global-exhibition-1.jpg";
 import globalExhibition2 from "../assets/client/hd-originals/global-exhibition-2.jpg";
 import globalExhibition3 from "../assets/client/hd-originals/global-exhibition-3.jpg";
@@ -19,14 +21,16 @@ import globalExhibition7 from "../assets/client/hd-originals/global-exhibition-7
 const cooperationImages = [
   cooperation1,
   cooperation2,
+  cooperation3,
+  cooperation4,
 ];
 const exhibitions = [
   globalExhibition1,
   globalExhibition2,
-  globalExhibition3,
   globalExhibition4,
   globalExhibition5,
   globalExhibition6,
+  globalExhibition3,
   globalExhibition7,
 ];
 export default function CompanyCulture() {
