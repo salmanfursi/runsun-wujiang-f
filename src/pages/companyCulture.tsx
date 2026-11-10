@@ -45,11 +45,11 @@ export default function CompanyCulture() {
   }, []);
   return (
     <main className="bg-[#faf8f2] text-gray-800">
-      <section className="relative min-h-[45vh] md:min-h-[60vh] flex items-center justify-center pt-24 pb-16">
+      <section className="relative min-h-[54vh] md:min-h-[72vh] flex items-center justify-center overflow-hidden pt-24 pb-16">
         <img
           src={factory}
           alt={t("culture.factoryAlt")}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-fill"
         />
         <div className="absolute inset-0 bg-black/40" />
         <h1 className="relative text-white text-3xl md:text-5xl font-bold px-6 text-center">

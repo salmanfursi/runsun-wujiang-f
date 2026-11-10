@@ -286,8 +286,8 @@ const ColorCard = () => {
   }, []);
   return (
     <div className="bg-gray-50 text-gray-800">
-      <section className="relative min-h-[45vh] md:min-h-[55vh] flex items-center justify-center text-white text-center pt-24 pb-16">
-        <img src={banner} alt={t("colorCard.hero.alt")} className="absolute inset-0 w-full h-full object-cover" />
+      <section className="relative min-h-[54vh] md:min-h-[66vh] flex items-center justify-center overflow-hidden text-white text-center pt-24 pb-16">
+        <img src={banner} alt={t("colorCard.hero.alt")} className="absolute inset-0 w-full h-full object-fill" />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 max-w-2xl px-6">
           <h1 className="text-3xl md:text-5xl font-bold mb-3">{t("colorCard.hero.title")}</h1>
