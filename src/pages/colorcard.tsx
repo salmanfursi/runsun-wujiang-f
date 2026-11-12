@@ -14,7 +14,9 @@ import cardCover12 from "../assets/colorcards/runsun-heitao-6.jpg";
 import cardCover13 from "../assets/colorcards/runsun-heitao-7.jpg";
 import cardCover14 from "../assets/colorcards/runsun-heitao-8.jpg";
 import type { TFunction } from "i18next";
-import banner from "../assets/client/factory-aerial-hd.jpg";
+// import banner from "../assets/client/factory-aerial-hd.jpg";
+import banner from "../assets/client/yarncompanyculture.jpeg";
+
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import PDFModal from "../components/PDFModal";
@@ -23,37 +25,38 @@ import { R2_BASE } from "../lib/r2";
 type Card = { title: string; img: string; desc: string; pdfLink?: string };
 
 // Newest color-card PDFs; titles live in colorCard.newCards in the locale files.
-const getNewCards = (t: TFunction): Card[] => [
-  // FW 27/28 color cards supplied October 2026.
-  "collection-book-aw27",
-  "kirwan-la-tour-carnet",
-  "mouton",
-  "dazzling",
-  "cloud-fluff",
-  "iris",
-  "peony",
-  "poria",
-  "radiant",
-  // Supplied in the August 2026 archive.
-  "haut-brion-ii",
-  "cler-milon",
-  "talbot",
-  "lalagune",
-  "seawool",
-  "durfort-vivens-ii",
-  "lynch-moussas",
-  "margaux-lafite-ii",
-  "pichon-duhame",
-  "cos-labory",
-  "gis-cours",
-  "lynch-bages",
-].map((slug) => ({
-  title: t(`colorCard.newCards.${slug}`),
-  // ?v= bypasses broken copies cached while the covers were still uploading.
-  img: `/colorcard/new/${slug}.jpg?v=2`,
-  desc: "2026 color card",
-  pdfLink: `/assets/pdf/new-colorcards/${slug}.pdf`,
-}));
+const getNewCards = (t: TFunction): Card[] =>
+  [
+    // FW 27/28 color cards supplied October 2026.
+    "collection-book-aw27",
+    "kirwan-la-tour-carnet",
+    "mouton",
+    "dazzling",
+    "cloud-fluff",
+    "iris",
+    "peony",
+    "poria",
+    "radiant",
+    // Supplied in the August 2026 archive.
+    "haut-brion-ii",
+    "cler-milon",
+    "talbot",
+    "lalagune",
+    "seawool",
+    "durfort-vivens-ii",
+    "lynch-moussas",
+    "margaux-lafite-ii",
+    "pichon-duhame",
+    "cos-labory",
+    "gis-cours",
+    "lynch-bages",
+  ].map((slug) => ({
+    title: t(`colorCard.newCards.${slug}`),
+    // ?v= bypasses broken copies cached while the covers were still uploading.
+    img: `/colorcard/new/${slug}.jpg?v=2`,
+    desc: "2026 color card",
+    pdfLink: `/assets/pdf/new-colorcards/${slug}.pdf`,
+  }));
 
 // --- Color Cards ---
 const getBaseCards = (t: TFunction): Card[] => [
@@ -222,34 +225,34 @@ const CardGrid = ({
 }) => {
   const { t } = useTranslation();
   return (
-  <div className="max-w-7xl mx-auto px-6 py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    {items.map((card) => (
-      <button
-        key={card.img}
-        type="button"
-        onClick={() => onCardClick(card)}
-        className="group block w-full rounded-xl bg-white text-left shadow-md overflow-hidden focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#b35b28]"
-        aria-label={`${t("colorCard.pdf.view")}: ${card.title}`}
-      >
-        <figure>
-          <img
-            src={
-              card.img.startsWith("/colorcard/") ||
-              card.img.startsWith("/ecolor/")
-                ? R2_BASE + card.img
-                : card.img
-            }
-            alt=""
-            className="w-full aspect-[4/3] object-contain transition-opacity group-hover:opacity-90"
-            loading="lazy"
-          />
-          <figcaption className="px-4 py-3 font-medium text-center text-[#b35b28] group-hover:underline">
-            {card.title}
-          </figcaption>
-        </figure>
-      </button>
-    ))}
-  </div>
+    <div className="max-w-7xl mx-auto px-6 py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {items.map((card) => (
+        <button
+          key={card.img}
+          type="button"
+          onClick={() => onCardClick(card)}
+          className="group block w-full rounded-xl bg-white text-left shadow-md overflow-hidden focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#b35b28]"
+          aria-label={`${t("colorCard.pdf.view")}: ${card.title}`}
+        >
+          <figure>
+            <img
+              src={
+                card.img.startsWith("/colorcard/") ||
+                card.img.startsWith("/ecolor/")
+                  ? R2_BASE + card.img
+                  : card.img
+              }
+              alt=""
+              className="w-full aspect-[4/3] object-contain transition-opacity group-hover:opacity-90"
+              loading="lazy"
+            />
+            <figcaption className="px-4 py-3 font-medium text-center text-[#b35b28] group-hover:underline">
+              {card.title}
+            </figcaption>
+          </figure>
+        </button>
+      ))}
+    </div>
   );
 };
 
@@ -270,8 +273,7 @@ const ColorCard = () => {
       pdfUrl: encodeURI(`/pdf-proxy${card.pdfLink}`),
       title: card.title,
       previewSrc:
-        card.img.startsWith("/colorcard/") ||
-        card.img.startsWith("/ecolor/")
+        card.img.startsWith("/colorcard/") || card.img.startsWith("/ecolor/")
           ? R2_BASE + card.img
           : card.img,
     });
@@ -282,21 +284,41 @@ const ColorCard = () => {
   };
 
   useEffect(() => {
-    ["cashmere", "humanandnature", "luxury"].forEach(name => { const image = new Image(); image.src = R2_BASE + "/colorcard/" + name + ".png"; });
+    ["cashmere", "humanandnature", "luxury"].forEach((name) => {
+      const image = new Image();
+      image.src = R2_BASE + "/colorcard/" + name + ".png";
+    });
   }, []);
   return (
     <div className="bg-gray-50 text-gray-800">
       <section className="relative min-h-[54vh] md:min-h-[66vh] flex items-center justify-center overflow-hidden text-white text-center pt-24 pb-16">
-        <img src={banner} alt={t("colorCard.hero.alt")} className="absolute inset-0 w-full h-full object-fill" />
+        <img
+          src={banner}
+          alt={t("colorCard.hero.alt")}
+          className="absolute inset-0 w-full h-full object-fill"
+        />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 max-w-2xl px-6">
-          <h1 className="text-3xl md:text-5xl font-bold mb-3">{t("colorCard.hero.title")}</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-3">
+            {t("colorCard.hero.title")}
+          </h1>
           <p>{t("colorCard.hero.subtitle")}</p>
         </div>
       </section>
-      <div className="relative -mt-6 mx-auto w-fit rounded-full bg-white px-8 py-3 shadow-md font-medium text-[#b35b28]">{t("colorCard.tabs.colorCards")}</div>
-      <section aria-label={t("colorCard.newest")}><h2 className="sr-only">{t("colorCard.newest")}</h2><CardGrid items={[...getNewCards(t), ...getBaseCards(t)]} onCardClick={handleCardClick} /></section>
-      <section aria-label={t("colorCard.older")}><h2 className="sr-only">{t("colorCard.older")}</h2><CardGrid items={getEColorCards(t)} onCardClick={handleCardClick} /></section>
+      <div className="relative -mt-6 mx-auto w-fit rounded-full bg-white px-8 py-3 shadow-md font-medium text-[#b35b28]">
+        {t("colorCard.tabs.colorCards")}
+      </div>
+      <section aria-label={t("colorCard.newest")}>
+        <h2 className="sr-only">{t("colorCard.newest")}</h2>
+        <CardGrid
+          items={[...getNewCards(t), ...getBaseCards(t)]}
+          onCardClick={handleCardClick}
+        />
+      </section>
+      <section aria-label={t("colorCard.older")}>
+        <h2 className="sr-only">{t("colorCard.older")}</h2>
+        <CardGrid items={getEColorCards(t)} onCardClick={handleCardClick} />
+      </section>
       <PDFModal
         isOpen={pdfModal.isOpen}
         pdfUrl={pdfModal.pdfUrl}

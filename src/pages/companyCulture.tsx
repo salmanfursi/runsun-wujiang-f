@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import factory from "../assets/client/factory-aerial-hd.jpg";
+// import factory from "../assets/client/factory-aerial-hd.jpg";
+import factory from "../assets/client/yarncompanyculture.jpeg";
 import eventTeam from "../assets/client/hd-originals/event-team.jpeg";
 import eventFeature from "../assets/client/hd-originals/event-feature.png";
 import eventActivity1 from "../assets/client/hd-originals/event-activity-1.jpeg";
@@ -84,17 +85,15 @@ export default function CompanyCulture() {
             loading="lazy"
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-            {[eventActivity1, eventActivity2].map(
-              (image, index) => (
-                <img
-                  key={image}
-                  src={image}
-                  alt={t("culture.eventAlt") + " " + (index + 1)}
-                  className="w-full h-auto rounded-xl"
-                  loading="lazy"
-                />
-              ),
-            )}
+            {[eventActivity1, eventActivity2].map((image, index) => (
+              <img
+                key={image}
+                src={image}
+                alt={t("culture.eventAlt") + " " + (index + 1)}
+                className="w-full h-auto rounded-xl"
+                loading="lazy"
+              />
+            ))}
           </div>
         </section>
         <section aria-labelledby="cooperation">
